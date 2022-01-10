@@ -250,3 +250,32 @@ function alphabetPosition(text) {
   }
   return resultStr.trim()
 }
+
+// Convert string to camelCase and remove separators
+function toCamelCase(str){
+  if (str.length === 0){
+    return ''
+  } 
+  
+  let allTogether = ''
+  for (const letter of str){
+    if (letter == '_' || letter == '-'){
+     allTogether += ' '
+    } else {
+      allTogether += letter
+    }
+  }
+  
+  let casing = allTogether.split(' ').map((value, index) => {
+  
+    if (index === 0 && value[0].toUpperCase() == value[0]){
+      return value
+    } else if (index === 0) {
+      return value.toLowerCase()
+    } else {
+     return value[0].toUpperCase() + value.slice(1).toLowerCase()
+    }
+  })
+  
+  return casing.join('')
+}
