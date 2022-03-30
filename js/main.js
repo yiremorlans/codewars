@@ -12,3 +12,14 @@ var countSheep = function (num){
   } return str
 }
 console.log(countSheep(4))
+
+//Consider an array with integers as string and numbers, return the sum of all the values as if they were numbers.
+function sumMix(x){
+  return x.reduce((total, x) => total + +x, 0)
+}
+
+//You are given two sorted arrays that both only contain integers. Find a way to merge them into a single one, sorted in asc order, remove duplicated in the returned result.
+function mergeArrays(arr1, arr2) {
+  let arr3 = [...new Set([...arr1,...arr2])]//new Set() creates an object w/o duplicate integers.
+  return arr3.sort((a,b) => a-b)
+}
