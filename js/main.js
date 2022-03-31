@@ -23,3 +23,52 @@ function mergeArrays(arr1, arr2) {
   let arr3 = [...new Set([...arr1,...arr2])]//new Set() creates an object w/o duplicate integers.
   return arr3.sort((a,b) => a-b)
 }
+
+//javascript.info/object exercises
+
+let user = {}
+
+user.name = 'John'
+user.surname = 'Smith'
+user.name = 'Pete'
+delete user.name
+
+//check for emptiness, return true if empty
+let schedule = {};
+
+function isEmpty (obj) {
+  for (let key in obj) { 
+    //for in loop starts only if there are keys in object
+      return false
+  }// if it finds keys in loop, it returns false, if it exits the loop, it was empty
+  return true
+}
+
+alert( isEmpty(schedule) ); // true
+
+schedule["8:30"] = "get up";
+
+alert( isEmpty(schedule) ); // false
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+
+let sum = 0
+for (let key in salaries) {
+  sum += salaries[key]
+}
+
+console.log(sum)
+
+//Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+function squareSum(numbers){
+  let squared = numbers.map(nums => nums*nums)
+    return squared.reduce((total, x) => total + x, 0)
+}
+
+console.log(squareSum([1,2]))
+
