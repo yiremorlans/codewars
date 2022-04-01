@@ -72,3 +72,12 @@ function squareSum(numbers){
 
 console.log(squareSum([1,2]))
 
+function warnTheSheep(queue) {
+  queue.forEach((element) => {
+    if (element === 'sheep') {
+      return `Oi! Sheep number ${element}! You are about to be eaten by a wolf!`
+    } else {
+      return `Pls go away and stop eating my sheep`
+    }  
+  })
+}
