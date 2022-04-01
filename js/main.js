@@ -533,3 +533,68 @@ function rentalCarCost(d) {
     return d * 40
   }
 }
+//Square every digit of a number and concatenate them. For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+function squareDigits(num){
+  let str = String(num)
+  let squared = ''
+  for (let i=0; i< str.length; i++) {
+    squared += str[i]**2 
+  }
+  return +squared
+}
+
+//Return dog and cat years to human years if: 15 cat years for first year, +9 cat years for second year, +4 cat years for each year after that
+//15 dog years for first year, +9 dog years for second year, +5 dog years for each year after that.
+
+const humanYearsCatYearsDogYears = (humanYears) => {
+  let catYears = 0;
+  let dogYears = 0;
+  
+  for (let i = 1; i <= humanYears; i++) {
+    if (i === 1) {
+      catYears += 15;
+      dogYears += 15;
+    }
+    else if (i === 2) {
+      catYears += 9;
+      dogYears += 9;
+    }
+    else {
+      catYears += 4;
+      dogYears += 5;
+    }
+  }
+  return [humanYears,catYears,dogYears];
+}
+//My solution below. I'm a baddie, I write bad code.
+var humanYearsCatYearsDogYears = function(humanYears) {
+  let catYears = 15
+  let dogYears = 15
+  if (humanYears == 1) {
+    return [humanYears,catYears,dogYears]
+  } else if (humanYears == 2) {
+    return [humanYears,catYears+9,dogYears+9]
+  } else {
+      let catYears = 24
+      let dogYears = 24
+    for (let i=3; i<=humanYears; catYears+= 4, dogYears+=5) {
+      i++
+    }
+    return [humanYears,catYears,dogYears]
+  }
+}
+//Refacter this bit of code to 85 chars or less.
+function find(array, element) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === element) return i;
+  }
+  return "Not found";
+}
+//My solution below.
+function find(ar, x) {
+  return ar.indexOf(x) == -1 ? 'Not found' : ar.indexOf(x)
+}
+//Refactored further
+const find = (arr, x) => arr.indexOf(x) >= 0 ? arr.indexOf(x) : 'Not found'
+
+//comment
