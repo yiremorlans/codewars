@@ -81,3 +81,44 @@ function warnTheSheep(queue) {
     }  
   })
 }
+
+
+function arr(arr) {
+  let newArray = []
+  for (let i =0; i < arr; i++) {
+     newArray.push(i)
+    }
+  return newArray
+}
+
+//Repeat a string n times
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+
+//alternatively
+function repeatStr (n, s) {
+  let output = ''
+  for (let i=0; i < n; i++) {
+    output += s
+  }
+  return output;
+}
+
+//Return negative only if number is positive
+function makeNegative(num) {
+  if (num > 0) {
+    return -(num)
+  } else {
+    return num
+  }
+}
+
+//Remove first and last chars in str, return leftover portion
+function removeChar(str){
+  return str.substring(1,str.length -1)
+};
+//better alternative
+function removeChar(str) {
+  return str.slice(1, -1);
+}
