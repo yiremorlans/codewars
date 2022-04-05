@@ -135,3 +135,12 @@ function noSpace(x){
   }
     return total
 }
+
+//Replace every given string with a different word
+function toFreud(string) {
+  if (string == '') {
+    return ''
+  } else {
+    return string.split(' ').map(word => 'sex' ).join(' ')
+  }
+}
