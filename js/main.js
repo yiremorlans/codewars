@@ -71,7 +71,7 @@ function squareSum(numbers){
 }
 
 console.log(squareSum([1,2]))
-
+//If there is a wolf next up in the array, tell it to scram, if there is a sheep, warn it about the wolf.
 function warnTheSheep(queue) {
   queue.forEach((element) => {
     if (element === 'sheep') {
@@ -143,4 +143,14 @@ function toFreud(string) {
   } else {
     return string.split(' ').map(word => 'sex' ).join(' ')
   }
+}
+
+//Staying hydrated is important. Create a function that determines how many litres of water to drink by the hour if 0.5litres per hour is the rule of thumb.
+function litres(time) {
+  return Math.floor(time * 0.5);
+}
+
+//Given a year, return the century it is in.
+function century(year) {
+  return Math.floor((year + 99) / 100)
 }
