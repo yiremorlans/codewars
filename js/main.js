@@ -219,3 +219,32 @@ function getCount(str) {
   
   return vowelsCount;
 }
+
+//Given an array of integers, return a new array with each value doubled.
+function maps(x){
+  let newArr = x.map(nums => nums * 2)
+  return newArr
+}
+
+//You receive an array with your peers' test scores. Now calculate the average and compare your score!
+function betterThanAverage(classPoints, yourPoints) {
+  let totalScore = classPoints.concat(yourPoints)
+  totalScore = totalScore.reduce((total, x) => total + x, 0) / totalScore.length
+  if (totalScore < yourPoints) {
+    return true;
+  } else {
+    return false;
+  }
+}
+//Check if two given characters are the same case. Take '?' ' ' into account.
+function sameCase(a, b){
+  const alpha = 'abcdefghijklmnopqrstuvwxyz'
+  if(!alpha.includes(a.toLowerCase()) || !alpha.includes(b.toLowerCase())) return -1
+  
+  const checkCase = x => {
+    if(x === x.toLowerCase()) return 'lower'
+    if(x === x.toUpperCase()) return 'upper'
+  }
+
+  return checkCase(a) === checkCase(b) ? 1 : 0
+}
