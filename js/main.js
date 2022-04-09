@@ -159,3 +159,33 @@ function century(year) {
 function arrayMadness(a, b) {
   return a.reduce((total, x) => total + x**2, 0) > b.reduce((total, x) => total + x**3, 0)
 }//No need to create conditional because the function evalutes true or false
+
+
+//Instructions are self explanatory from function names
+function getLength(arr){
+  return arr.length;
+}
+function getFirst(arr){
+  return arr[0];
+}
+function getLast(arr){
+  return arr[arr.length-1];
+} // return +arr.slice(-1)
+function pushElement(arr){
+  arr.push(1);
+  return arr;
+}
+function popElement(arr){
+  arr.pop()
+  return arr;
+}
+
+//Push an object into an array, keep it simple
+items = []
+items.push({a: "b", c: "d"}) 
+console.log(items)
+
+//Is n divisible by x && y?
+function isDivisible(n, x, y) {
+  return (n % x === 0 && n % y === 0) ? true : false;
+}
