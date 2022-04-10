@@ -189,3 +189,33 @@ console.log(items)
 function isDivisible(n, x, y) {
   return (n % x === 0 && n % y === 0) ? true : false;
 }
+
+//Return the count of all the vowels in a string
+function getCount(str) {
+  var vowelsCount = 0;
+  
+  let newArr = Array.from(str)
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr[i].includes('a') ||
+      newArr[i].includes('e') ||
+      newArr[i].includes('i') ||
+      newArr[i].includes('o') ||
+      newArr[i].includes('u') == true) 
+      vowelsCount++
+    }
+  return vowelsCount;
+} 
+// OR less verbose solution
+function getCount(str) {
+  var vowelsCount = 0;
+  var vowels = ["a","e","i","o","u"];
+  for(var i = 0;i < str.length;i++){
+    for(var j=0;j<vowels.length;j++){
+      if(str[i] === vowels[j]){
+        vowelsCount++;
+      }
+    }
+  }
+  
+  return vowelsCount;
+}
