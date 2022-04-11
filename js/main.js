@@ -219,3 +219,20 @@ function getCount(str) {
   
   return vowelsCount;
 }
+
+//Given an array of integers, return a new array with each value doubled.
+function maps(x){
+  let newArr = x.map(nums => nums * 2)
+  return newArr
+}
+
+//You receive an array with your peers' test scores. Now calculate the average and compare your score!
+function betterThanAverage(classPoints, yourPoints) {
+  let totalScore = classPoints.concat(yourPoints)
+  totalScore = totalScore.reduce((total, x) => total + x, 0) / totalScore.length
+  if (totalScore < yourPoints) {
+    return true;
+  } else {
+    return false;
+  }
+}
