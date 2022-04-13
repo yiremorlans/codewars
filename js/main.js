@@ -236,3 +236,14 @@ function betterThanAverage(classPoints, yourPoints) {
     return false;
   }
 }
+
+//Implement the array.prototype.filter() from scratch.
+Array.prototype.filter = function(fn){
+  var res = [];
+  for (var i = 0; i<this.length; i++){ //this keyword to reference param passed from fn
+    if (fn(this[i])){ 
+      res.push(this[i]);
+    }
+  }
+  return res;
+}
