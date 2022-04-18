@@ -256,3 +256,43 @@ function greet(name){
       return "Hello, " + name + "!";
     }
 }
+
+//Check same case (8kyu, but might as well be 7kyu)
+/*Write a function that will check if two given characters are the same case.
+
+If either of the characters is not a letter, return -1
+If both characters are the same case, return 1
+If both characters are letters, but not the same case, return 0 */
+
+function sameCase(a, b){
+  const alpha = 'abcdefghijklmnopqrstuvwxyz'
+  if(!alpha.includes(a.toLowerCase()) || !alpha.includes(b.toLowerCase())) return -1
+  
+  const checkCase = x => {
+    if(x === x.toLowerCase()) return 'lower'
+    if(x === x.toUpperCase()) return 'upper'
+  }
+
+  return checkCase(a) === checkCase(b) ? 1 : 0
+}
+/*Create a method all which takes two params:
+a sequence
+a function
+and returns true if the function in the params returns true for every element in the sequence. */
+
+function all( arr, fun ) { //function contains the test that will run on the elements.
+  return arr.every(fun) ? true : false
+} // every() returns a boolean that checks if the arr passes the tests in the fun
+
+//Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside
+function solution(a, b){
+  if (a.length > b.length) {
+    return b.concat(a) + b
+  } else {
+    return a.concat(b) + a
+  }
+}
+//Ternary version for the above solution ^^^
+function solution(a, b) {
+  return a.length < b.length ? a + b + a : b + a + b
+}
