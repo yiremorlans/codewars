@@ -296,3 +296,10 @@ function solution(a, b){
 function solution(a, b) {
   return a.length < b.length ? a + b + a : b + a + b
 }
+//Your task is to sum the differences between consecutive pairs in the array in descending order.
+function sumOfDifferences(arr) {
+  return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+}
+
+
+//Given a list of the times you need to brew each coffee, return the minimum total waiting time. but you need 2 additional minutes to clean the coffee machine after each coffee you make.
