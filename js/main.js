@@ -300,6 +300,17 @@ function solution(a, b) {
 function sumOfDifferences(arr) {
   return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
 }
+//OR 
+function sumOfDifferences(arr) {
+  arr.sort((a,b)=>b-a) 
+  let final = 0 
+  for(let i = 0;i<arr.length-1;i++){ 
+    final = final + arr[i] - arr[i+1]  
+  }
+  return final 
+}
 
-
-//Given a list of the times you need to brew each coffee, return the minimum total waiting time. but you need 2 additional minutes to clean the coffee machine after each coffee you make.
+//Convert a boolean into a string of its value:
+function booleanToString(b){
+  return b ? 'true' : 'false';
+}
