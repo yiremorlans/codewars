@@ -314,3 +314,30 @@ function sumOfDifferences(arr) {
 function booleanToString(b){
   return b ? 'true' : 'false';
 }
+
+/* Given a list of the times you need to brew each coffee, return the minimum total waiting time.
+ but you need 2 additional minutes to clean the coffee machine after each coffee you make. */
+ function barista(coffees){
+  //TODO: Maths are cool!
+  
+  // 0 + 2 + 4 + 6 + 8
+  // 0 + 2(1) + 2(2) + 2(3) + 2(4)
+  
+  var sum = 0;
+  var coffees = coffees.sort(function(a, b) {return a - b;});
+  console.log(coffees);
+  coffees.reduce(
+    (previousValue, currentValue, currentIndex) => {
+      var waitTime = currentIndex < 1 ? currentValue : previousValue + currentValue + 2;
+      console.log(waitTime);
+      sum += waitTime;
+      return waitTime;
+    }, 0);
+  return sum;
+}
+
+//Invert values 
+function invert(array) {
+  return array.map(nums => -nums)
+} //OR function arrow expression
+const invert = array => array.map(num => -num)
