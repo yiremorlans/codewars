@@ -341,3 +341,23 @@ function invert(array) {
   return array.map(nums => -nums)
 } //OR function arrow expression
 const invert = array => array.map(num => -num)
+
+//Create a function that does basic maths
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+      case '+': return value1 + value2
+      break;
+      case '-': return value1 - value2
+      break;
+      case '/': return value1 / value2
+      break;
+      case '*': return value1 * value2
+      break;
+      default: return false
+  }
+}
+
+//Create a function that returns the milliseconds of time past midnight.
+function past(h, m, s){
+  return (s * 1000) + (m * 60000) + (h * 3600000)
+}
