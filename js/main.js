@@ -361,3 +361,22 @@ function basicOp(operation, value1, value2) {
 function past(h, m, s){
   return (s * 1000) + (m * 60000) + (h * 3600000)
 }
+
+//Count of positives and sum of negatives. Return an array with [count, sum]
+function countPositivesSumNegatives(input) {
+  if (input == null || input.length == 0)
+    return [];
+  
+  let positive = 0;
+  let negative = 0;
+  
+  for (let i=0; i< input.length; i++)
+  {
+    if (input[i] > 0)
+      positive++;
+    else
+      negative += input[i];
+  }
+  
+  return [positive, negative];
+}
