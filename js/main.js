@@ -392,4 +392,3 @@ function hero(bullets, dragons){
   }
  }
  
-}
