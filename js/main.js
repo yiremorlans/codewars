@@ -392,4 +392,20 @@ function hero(bullets, dragons){
   }
  }
  
-}
+
+ //Return a string of whether or not the name that starts with 'R' or 'r' plays the banjo.
+ function areYouPlayingBanjo(name) {
+  if (name.startsWith('R') === true || name.startsWith('r') === true) {
+    return `${name} plays banjo`
+    } else {
+     return `${name} does not play banjo`
+    }
+  }
+  // OR 
+  function areYouPlayingBanjo(name) {
+    if (name[0].toLowerCase() === 'r') {
+      return name + ' plays banjo';
+    } else {
+      return name + ' does not play banjo';
+    }
+  }
