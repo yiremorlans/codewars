@@ -451,3 +451,20 @@ const reverseSeq = n => {
   };
 
 
+//Convert DNA string to RNA string by replacing all instances of 'T' with 'U'
+function DNAtoRNA(dna) {
+  let str = ''
+for (let i=0; i< dna.length; i++) {
+  if (dna[i] === 'T') {
+    str += 'U'
+  } else {
+    str += dna[i]
+  }
+}
+  return str
+}
+
+//Alternatively 
+function DNAtoRNA(dna) {
+  return dna.split("T").join("U");
+}
