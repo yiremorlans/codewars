@@ -479,3 +479,16 @@ function lovefunc(flower1, flower2){
     return false
   }
 }
+//You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. 
+//Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  if (fuelLeft * mpg >= distanceToPump) {
+    return true
+  } else {
+    return false
+  }
+};
+// ALSO 
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return fuelLeft * mpg >= distanceToPump
+};
