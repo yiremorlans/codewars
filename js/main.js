@@ -508,3 +508,12 @@ function simpleMultiplication(number) {
 function grow(x){
   return x.reduce((total, x) => total * x, 1)
 } // accumulator set to 1 instead of 0 allows for multiplying through the array without giving 0.
+
+//Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
+function monkeyCount(n) {
+  let arr = []
+  for (let i=1; i <= n; i++) {
+    arr.push(i)
+  }
+  return arr
+}
