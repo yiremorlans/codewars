@@ -496,6 +496,10 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 //You are given a string of space separated numbers, and have to return the highest and lowest number with a space in between.
 function highAndLow(numbers){
   let arr = numbers.split(' ').sort((a,b) => b-a)
-  console.log(arr)
   return `${arr[0]} ${arr[arr.length -1]}`
+}
+
+//Simple multiplication if number is even, multiply by 8, else, multiply by 9.
+function simpleMultiplication(number) {
+  return number % 2 === 0 ? number * 8 : number * 9
 }
