@@ -503,3 +503,8 @@ function highAndLow(numbers){
 function simpleMultiplication(number) {
   return number % 2 === 0 ? number * 8 : number * 9
 }
+
+//Given a non-empty array of integers, return the result of multiplying the values together in order. Example: [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+function grow(x){
+  return x.reduce((total, x) => total * x, 1)
+} // accumulator set to 1 instead of 0 allows for multiplying through the array without giving 0.
