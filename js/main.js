@@ -492,3 +492,10 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return fuelLeft * mpg >= distanceToPump
 };
+
+//You are given a string of space separated numbers, and have to return the highest and lowest number with a space in between.
+function highAndLow(numbers){
+  let arr = numbers.split(' ').sort((a,b) => b-a)
+  console.log(arr)
+  return `${arr[0]} ${arr[arr.length -1]}`
+}
