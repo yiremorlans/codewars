@@ -517,3 +517,8 @@ function monkeyCount(n) {
   }
   return arr
 }
+
+//Given an array of words, return a str as a sentence without space in the beginning and end.
+function smash (words) {
+  return words.join(' ').trim()
+};
