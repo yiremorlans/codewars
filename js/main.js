@@ -598,3 +598,4 @@ function find(ar, x) {
 const find = (arr, x) => arr.indexOf(x) >= 0 ? arr.indexOf(x) : 'Not found'
 
 //comment
+const find = (arr, x) => arr.indexOf(x) >= 0 ? arr.indexOf(x) : 'Not found'
