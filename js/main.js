@@ -204,7 +204,8 @@ function getCount(str) {
       vowelsCount++
     }
   return vowelsCount;
-} 
+}
+
 // OR less verbose solution
 function getCount(str) {
   var vowelsCount = 0;
@@ -597,5 +598,13 @@ function find(ar, x) {
 //Refactored further
 const find = (arr, x) => arr.indexOf(x) >= 0 ? arr.indexOf(x) : 'Not found'
 
-//comment
-const find = (arr, x) => arr.indexOf(x) >= 0 ? arr.indexOf(x) : 'Not found'
+//Shuffle the string where you return the last name, first name from first, last.
+function nameShuffler(str){
+  let arr = str.split(' ')
+  return `${arr[1]} ${arr[0]}`
+}
+// alternative easy answer
+function nameSuffle(str){
+  return str.split(' ').reverse().join(' ')
+}
+
