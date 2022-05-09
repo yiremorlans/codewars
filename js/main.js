@@ -632,3 +632,17 @@ function points(games) {
   });
   return total;
 }
+
+//Return a customized solution if name equals owner return Hello boss otherwise, Hello guest
+function greet (name, owner) {
+  if (name === owner) {
+    return `Hello boss`
+  } else {
+    return `Hello guest`
+  }
+ }
+//also
+function greet (name, owner) {
+  return name === owner ? 'Hello boss' : 'Hello guest'
+}
+
