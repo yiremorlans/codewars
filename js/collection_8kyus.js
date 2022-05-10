@@ -8,3 +8,16 @@ function countBy(x, n) {
     }
     return z;
   }
+//write a function that takes a salary(num) and a bonus(boolean) and returns a bonus if the boolean is true.
+  function bonusTime(salary, bonus) {
+     if (bonus) {
+       return '£' + salary * 10
+       } else {
+         return '£' + salary
+       }
+     }
+//one liner option below
+function bonusTime(salary, bonus) {
+  return bonus ? `£${10 * salary}` : `£${salary}`
+}
+    
