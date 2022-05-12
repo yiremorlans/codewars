@@ -7,3 +7,16 @@ var isSquare = function(n){
     }
 // ALSO Number.isInteger() method returns boolean if number is a whole integer
 const isSquare = n => Number.isInteger(Math.sqrt(n));
+
+//Your task is to write a function that takes a string and return a new string with all vowels removed.
+function disemvowel(str) {
+  let newStr = ''
+  let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+  for (let i =0; i<str.length; i++){
+    if (vowels.includes(str[i]) === false) {
+      newStr += str[i]
+      console.log(newStr)
+    }
+  }
+  return newStr
+}
