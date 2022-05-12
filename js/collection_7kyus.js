@@ -20,3 +20,8 @@ function disemvowel(str) {
   }
   return newStr
 }
+//Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order.
+function descendingOrder(n){
+  let newArr = String(n).split('').sort((a,b) => b-a).join('')
+  return +newArr
+}
