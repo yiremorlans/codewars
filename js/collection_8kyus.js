@@ -20,4 +20,11 @@ function countBy(x, n) {
 function bonusTime(salary, bonus) {
   return bonus ? `£${10 * salary}` : `£${salary}`
 }
+
+//Take in a 2D array [[1,2],[3,4],[5,6]] and place into new array, sorted in descending order with > inbetween each integer.
+function bigToSmall(arr){
+  let newArr = [].concat(...arr).sort((a, b) => b-a).join('>')
+  return newArr
+}
+
     
