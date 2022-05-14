@@ -26,5 +26,22 @@ function bigToSmall(arr){
   let newArr = [].concat(...arr).sort((a, b) => b-a).join('>')
   return newArr
 }
+//Write a function that takes such collection and counts the points of our team in the championship. Rules for counting points for each match:
+/*
+if x > y: 3 points
+if x < y: 0 point
+if x = y: 1 point
+*/
+function points(games) {
+  let result = 0
+  games.map(game => {
+    if (game[0]===game[2]) {
+      result += 1
+     } else if (game[0]>game[2]) {
+        result += 3
+      }
+      })
+  return result
+}
 
     
