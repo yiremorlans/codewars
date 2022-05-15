@@ -53,4 +53,12 @@ const areaOrPerimeter = function(l , w) {
    //also return l == w ? l*w : 2*(l + w)
  };
 
-    
+ //Remove exclamation marks frin string
+ function removeExclamationMarks(s) {
+  let emptyStr = ''
+  for (let i=0; i< s.length; i++) {
+    s[i].includes('!') ? s[i] = emptyStr : emptyStr += s[i]
+  }
+  return emptyStr
+  //return s.split('!').join('')
+}   

@@ -16,3 +16,4 @@ function sameCase(a, b){
 
   return checkCase(a) === checkCase(b) ? 1 : 0
 }
+
