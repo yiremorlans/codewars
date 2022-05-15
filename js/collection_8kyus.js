@@ -43,5 +43,14 @@ function points(games) {
       })
   return result
 }
+//Return the area or perimeter of the shape depending on the sides
+const areaOrPerimeter = function(l , w) {
+  if ( l === w) {
+    return l * w
+  } else {
+    return (l + w) * 2
+  }
+   //also return l == w ? l*w : 2*(l + w)
+ };
 
     
