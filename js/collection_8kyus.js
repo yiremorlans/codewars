@@ -70,3 +70,12 @@ function between(a, b) {
   }
   return newArr
 }
+//Sum without highest and lowest number. Take into account input validation.
+function sumArray(array) {
+  let newArr;
+  if (array === null || array === undefined || array.length === 0) {
+    return 0
+  } else {
+  return newArr = array.sort((a, b) => a-b).slice(1, -1).reduce((total, x) => total + x  ,0)
+  }
+}
