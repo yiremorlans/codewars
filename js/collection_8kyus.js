@@ -79,3 +79,23 @@ function sumArray(array) {
   return newArr = array.sort((a, b) => a-b).slice(1, -1).reduce((total, x) => total + x  ,0)
   }
 }
+
+//Define a card suit from preloaded deck, ex: ('3♣') -> return 'clubs'
+function defineSuit(card) {
+  let suit = card.length > 2 ? card[2] : card[1]
+  //switch (card.slice(-1)){
+  switch (suit) {
+      case '♣':
+        return 'clubs'
+        break;
+      case '♦':
+        return 'diamonds'
+        break;
+      case '♥':
+        return 'hearts'
+        break;
+      case '♠':
+        return 'spades'  
+    }
+}
+//
