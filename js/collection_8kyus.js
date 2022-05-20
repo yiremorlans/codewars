@@ -98,4 +98,7 @@ function defineSuit(card) {
         return 'spades'  
     }
 }
-//
+//Is integer a and b divisible by given number?
+function isDivideBy(num, a, b) {
+  return num % a === 0 && num % b === 0 ? true : false
+}
