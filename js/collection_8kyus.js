@@ -102,3 +102,12 @@ function defineSuit(card) {
 function isDivideBy(num, a, b) {
   return num % a === 0 && num % b === 0 ? true : false
 }
+//Find the first non-consecutive number, if sequential or empty return null
+function firstNonConsecutive (arr) {
+  for (let i =0; i< arr.length-1; i++) {
+       if (arr[i+1] - arr[i] !== 1) {
+       return arr[i+1]
+        }
+        }
+    return null
+      }
