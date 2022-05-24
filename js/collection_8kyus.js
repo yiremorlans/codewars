@@ -111,3 +111,15 @@ function firstNonConsecutive (arr) {
         }
     return null
       }
+//Return an array if the number has an integer square root, take this, otherwise square the number.
+function squareOrSquareRoot(array) {
+  let newArr = []
+  for (let i=0; i< array.length; i++) {
+    if (Number.isInteger(array[i]**.5)) {
+      newArr.push(array[i]**.5)
+    } else {
+      newArr.push(array[i]**2)
+    }
+  }
+  return newArr
+}
