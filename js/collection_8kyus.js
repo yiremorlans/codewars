@@ -127,3 +127,15 @@ function squareOrSquareRoot(array) {
 function capitalizeWord(word) {
   return word[0].toUpperCase() + word.slice(1);
 }
+//write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
+function stringy(size) {
+  let str = ''
+  for (let i=1; i <= size; i++) {
+    str += 1
+    i++
+    if (str.length < size) {
+      str += 0
+    }
+  }
+  return str   
+}
