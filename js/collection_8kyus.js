@@ -139,3 +139,8 @@ function stringy(size) {
   }
   return str   
 }
+//Create a function with a str variable that says 'Hello World!' and console log it.
+function helloWorld() {
+  let str = 'Hello World!'
+  console.log(str)
+}
