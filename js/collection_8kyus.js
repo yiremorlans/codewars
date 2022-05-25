@@ -152,5 +152,11 @@ function updateLight(current) {
       case 'yellow' : return 'red'
       case 'red' : return 'green'
   }
-
 }
+//Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
+function howMuchILoveYou(nbPetals) {
+  const phrase = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
+  return phrase[(nbPetals -1) % phrase.length]
+  //remainder is 4, so the index is phrase[4] == 'madly'
+}
+console.log(howMuchILoveYou(35))
