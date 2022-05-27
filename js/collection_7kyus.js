@@ -25,3 +25,10 @@ function descendingOrder(n){
   let newArr = String(n).split('').sort((a,b) => b-a).join('')
   return +newArr
 }
+//Return an array of only integers when given a list of positive integers and string.
+function filter_list(l) {
+  return l.filter(number => Number.isInteger(number))
+}
+function filter_list(l) {
+  return l.filter(Number.isInteger);
+}//also passing a method reference with no ()invocation is the same
