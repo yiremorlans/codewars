@@ -176,3 +176,7 @@ function doubleChar(str) {
   }
   return newStr
 }
+//Return int as age from a given string where it's always 'x years old'
+function getAge(inputString){
+  return +inputString[0]
+ }
