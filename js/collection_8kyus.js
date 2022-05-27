@@ -160,3 +160,7 @@ function howMuchILoveYou(nbPetals) {
   //remainder is 4, so the index is phrase[4] == 'madly'
 }
 console.log(howMuchILoveYou(35))
+//Calculate km per hour to cm per second as the speed of a cockaroach
+function cockroachSpeed(s) {
+  return Math.floor(s * 27.778)
+}//literal google conversion numbers
