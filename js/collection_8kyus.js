@@ -164,3 +164,7 @@ console.log(howMuchILoveYou(35))
 function cockroachSpeed(s) {
   return Math.floor(s * 27.778)
 }//literal google conversion numbers
+//Calculate the sum of Messi's goals in all three leagues
+function goals (...golazos) {
+  return golazos.reduce((total, leagueGoals ) => total + leagueGoals, 0)
+}
