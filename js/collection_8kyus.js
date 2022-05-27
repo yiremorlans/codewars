@@ -180,3 +180,10 @@ function doubleChar(str) {
 function getAge(inputString){
   return +inputString[0]
  }
+//Return the age when dad was twice as old as the son
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return  dadYearsOld - (sonYearsOld * 2) > 0 ? dadYearsOld - (sonYearsOld * 2) : -(dadYearsOld - (sonYearsOld * 2))
+}
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}//Math.abs() returns the absolute of a number. If negative, returns positive and vice versa
