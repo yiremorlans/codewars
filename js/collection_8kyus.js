@@ -168,3 +168,11 @@ function cockroachSpeed(s) {
 function goals (...golazos) {
   return golazos.reduce((total, leagueGoals ) => total + leagueGoals, 0)
 }
+//Return a str where every char in the str is doubled
+function doubleChar(str) {
+  let newStr = ''
+  for (let i=0;i<str.length; i++) {
+    newStr += str[i] + str[i]
+  }
+  return newStr
+}
