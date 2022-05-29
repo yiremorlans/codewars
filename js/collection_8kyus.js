@@ -187,3 +187,8 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 function twiceAsOld(dadYearsOld, sonYearsOld) {
   return Math.abs(dadYearsOld - 2 * sonYearsOld);
 }//Math.abs() returns the absolute of a number. If negative, returns positive and vice versa
+
+//Write a function that returns true or false if the beast's first and last character is the same for the dish.
+function feast(beast, dish) {
+  return beast.startsWith(dish[0]) && beast.endsWith(dish[dish.length-1])
+}
