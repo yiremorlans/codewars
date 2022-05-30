@@ -196,3 +196,5 @@ function feast(beast, dish) {
 function enough(cap, on, wait) {
   return wait + on <= cap ? 0 : Math.abs(cap - (wait + on))
 }
+//Return the string written number of integer number. Logging for clever solution over switch case
+switchItUp=n=>["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n]
