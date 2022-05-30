@@ -211,7 +211,7 @@ const quarterOf = (month) => {
   }
 }// clever solution below
 const quarterOf = m => Math.ceil(m/3);
-//Given 3 ints, return the highest maximun int obtained from combination of operatios.
+//Given 3 ints, return the highest maximun int obtained from combination of operations.
 function expressionMatter(a, b, c) {
   let newArr = []
   newArr.push(a * (b + c))
@@ -231,3 +231,20 @@ function expressionMatter(a, b, c) {
     a * b + c,
   );
 }
+//Create a function that alternates case on a string
+String.prototype.toAlternatingCase = function () {
+  let newStr = ''
+  for (let i=0; i< this.length; i++) {
+    if (this[i] === this[i].toUpperCase()) {
+      newStr += this[i].toLowerCase()
+    } else if (this[i] === this[i].toLowerCase()) {
+      newStr += this[i].toUpperCase()
+    } else {
+      newStr += this[i]
+    }
+  }
+  return newStr
+}
+String.prototype.toAlternatingCase = function () {
+  return this.split("").map(a => a === a.toUpperCase()? a.toLowerCase(): a.toUpperCase()).join('')
+} //beautiful one liner, still easy to read imo
