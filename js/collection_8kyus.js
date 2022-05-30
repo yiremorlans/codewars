@@ -211,3 +211,23 @@ const quarterOf = (month) => {
   }
 }// clever solution below
 const quarterOf = m => Math.ceil(m/3);
+//Given 3 ints, return the highest maximun int obtained from combination of operatios.
+function expressionMatter(a, b, c) {
+  let newArr = []
+  newArr.push(a * (b + c))
+  newArr.push(a * b * c)
+  newArr.push(a + b * c)
+  newArr.push((a + b) * c)
+  newArr.push(a + b + c)
+  return Math.max(...newArr)
+}//also could return Math.max(*....*)
+function expressionMatter(a, b, c) {
+  return Math.max(
+    a + b + c,
+    a * b * c,
+    a * (b + c),
+    (a + b) * c,
+    a + b * c,
+    a * b + c,
+  );
+}
