@@ -192,3 +192,7 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 function feast(beast, dish) {
   return beast.startsWith(dish[0]) && beast.endsWith(dish[dish.length-1])
 }
+//Write a function that takes 3 parameters and returns 0 if enough room on the bus otherwise the amount that can't fit capacity
+function enough(cap, on, wait) {
+  return wait + on <= cap ? 0 : Math.abs(cap - (wait + on))
+}
