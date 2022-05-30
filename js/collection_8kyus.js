@@ -198,3 +198,16 @@ function enough(cap, on, wait) {
 }
 //Return the string written number of integer number. Logging for clever solution over switch case
 switchItUp=n=>["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n]
+//Return which quarter of the year we're in
+const quarterOf = (month) => {
+  if (month < 4) {
+    return 1
+  } else if (month < 7) {
+    return 2
+  } else if (month < 10) {
+    return 3
+  } else {
+    return 4
+  }
+}// clever solution below
+const quarterOf = m => Math.ceil(m/3);
