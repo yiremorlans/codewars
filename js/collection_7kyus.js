@@ -32,3 +32,8 @@ function filter_list(l) {
 function filter_list(l) {
   return l.filter(Number.isInteger);
 }//also passing a method reference with no ()invocation is the same
+
+//Return a string sentence where the beginning letter of every word is uppercase. Ex Hello World
+String.prototype.toJadenCase = function () {
+  return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
+};
