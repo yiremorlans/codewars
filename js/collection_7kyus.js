@@ -37,3 +37,21 @@ function filter_list(l) {
 String.prototype.toJadenCase = function () {
   return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
 };
+//Count the x's and o'x in the string to return true or false if amount is equal
+function XO(str) {
+  str = str.toLowerCase()
+  let x = 0
+  let o = 0
+  for (let i=0; i<= str.length; i++) {
+    if (str[i] === 'x') {
+      x++    
+    }
+    if (str[i] === 'o') {
+      o++
+    }
+  }
+ return x === o
+}//Simple, readable solution from codewars below 
+function XO(str) {
+  return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+}
