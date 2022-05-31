@@ -54,4 +54,12 @@ function XO(str) {
 }//Simple, readable solution from codewars below 
 function XO(str) {
   return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+} 
+const XO = str => {
+  str = str.toLowerCase().split('');
+  return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
+}
+// Write a function that will produce this example: accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+function accum(s) {
+  return s.split('').map((element, index) => element.toUpperCase() + element.toLowerCase().repeat(index)).join('-')
 }
