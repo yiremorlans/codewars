@@ -248,3 +248,23 @@ String.prototype.toAlternatingCase = function () {
 String.prototype.toAlternatingCase = function () {
   return this.split("").map(a => a === a.toUpperCase()? a.toLowerCase(): a.toUpperCase()).join('')
 } //beautiful one liner, still easy to read imo
+
+//Remove every other element, skipping the first.
+function removeEveryOther(arr){
+  for (let i=1; i<arr.length; i++) {
+     arr.splice(i,1)
+  }
+    return arr
+}
+function removeEveryOther(arr){
+  return arr.filter(function(elem, index) {
+    return index % 2 === 0;
+  });
+}
+function removeEveryOther(arr){
+  var newArr=[];
+for (var i = 0; i < arr.length; i+=2){
+  newArr.push(arr[i]);
+  }
+return newArr;
+}
