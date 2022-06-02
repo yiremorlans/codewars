@@ -268,3 +268,7 @@ for (var i = 0; i < arr.length; i+=2){
   }
 return newArr;
 }
+//FIXME: Replace all the dots in the string with - w/o using .replaceAll()
+var replaceDots = function(str) {
+  return str.split('.').join('-')
+}
