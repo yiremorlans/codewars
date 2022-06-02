@@ -272,3 +272,9 @@ return newArr;
 var replaceDots = function(str) {
   return str.split('.').join('-')
 }
+//Check for uppercase. Return true only if all chars are uppercase.
+String.prototype.isUpperCase = function() {
+  let newArr = this.split('')
+  let isUpperCase = (value) => value == value.toUpperCase()
+  return newArr.every(isUpperCase)
+}
