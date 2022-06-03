@@ -278,3 +278,18 @@ String.prototype.isUpperCase = function() {
   let isUpperCase = (value) => value == value.toUpperCase()
   return newArr.every(isUpperCase)
 }
+//Better solution
+String.prototype.isUpperCase=function() {return this==this.toUpperCase()}
+
+//Calculate the number of grades based on the specific conditions stated.
+function finalGrade (exam, projects) {
+  if (exam > 90 || projects > 10) {
+    return 100
+  } else if (exam > 75 && projects >= 5) {
+    return 90
+  } else if (exam > 50 && projects >= 2) {
+    return 75
+  } else {
+    return 0
+  }
+}
