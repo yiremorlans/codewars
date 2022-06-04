@@ -293,3 +293,7 @@ function finalGrade (exam, projects) {
     return 0
   }
 }
+//Create a function that arranges the array of in the correct order.
+function fixTheMeerkat(arr) {
+  return arr.reverse()
+}
