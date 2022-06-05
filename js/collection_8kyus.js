@@ -297,3 +297,7 @@ function finalGrade (exam, projects) {
 function fixTheMeerkat(arr) {
   return arr.reverse()
 }
+//Find the difference of the volume of cuboids.
+function findDifference(a, b) {
+  return Math.abs((a.reduce((total, num) => total * num, 1)) - (b.reduce((total, num) => total * num, 1)))
+ }
