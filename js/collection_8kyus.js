@@ -301,3 +301,19 @@ function fixTheMeerkat(arr) {
 function findDifference(a, b) {
   return Math.abs((a.reduce((total, num) => total * num, 1)) - (b.reduce((total, num) => total * num, 1)))
  }
+ //Correct the mistakes of the character recognition software.
+ function correct(string) {
+  let correctedString = ''
+  for (let i=0; i<string.length; i++){
+    if (string[i] == '0') {
+      correctedString += 'O'
+    } else if (string[i] == '5') {
+      correctedString += 'S' 
+    } else if (string[i] == '1') {
+      correctedString += 'I'
+    } else {
+      correctedString += string[i]
+    }
+  }
+  return correctedString
+}//Tricky part was testing for numbers as str, not as nums
