@@ -63,3 +63,13 @@ const XO = str => {
 function accum(s) {
   return s.split('').map((element, index) => element.toUpperCase() + element.toLowerCase().repeat(index)).join('-')
 }
+//Given a string of words, return the length of the shortest word.
+function findShort(s){
+  let arrOfStr = s.split(' ').map(word => word.length)
+  return Math.min(...arrOfStr)
+  }
+//Sum of the two lowest integers in an array
+function sumTwoSmallestNumbers(numbers) {  
+  const sorted = numbers.sort((a,b) => a-b)
+  return sorted[0] + sorted[1]
+}
