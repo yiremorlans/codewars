@@ -302,7 +302,7 @@ function findDifference(a, b) {
   return Math.abs((a.reduce((total, num) => total * num, 1)) - (b.reduce((total, num) => total * num, 1)))
  }
  //Correct the mistakes of the character recognition software.
- function correct(string) {
+ function correct(string) {//Tricky part was testing for numbers as str, not as nums
   let correctedString = ''
   for (let i=0; i<string.length; i++){
     if (string[i] == '0') {
@@ -316,4 +316,9 @@ function findDifference(a, b) {
     }
   }
   return correctedString
-}//Tricky part was testing for numbers as str, not as nums
+}
+//How many stairs will Suzuki climb in 20 years using an array of nested arrays.
+function stairsIn20(s){
+  let singleArr = s.reduce((total, value) => total.concat(value), [])
+  return singleArr.reduce((total, value) => total + value, 0) * 20
+} 
