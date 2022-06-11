@@ -321,4 +321,12 @@ function findDifference(a, b) {
 function stairsIn20(s){
   let singleArr = s.reduce((total, value) => total.concat(value), [])
   return singleArr.reduce((total, value) => total + value, 0) * 20
-} 
+}
+//Return an array with a range of numbers when provided with min, max and step
+function generateRange(min, max, step){
+  let range = []
+  for (let i=min; i<= max; i += step) {
+    range.push(i)
+  }
+  return range
+}
