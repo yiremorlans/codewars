@@ -330,3 +330,11 @@ function generateRange(min, max, step){
   }
   return range
 }
+//Return an array with every number until given (n) all powers of two.
+function powersOfTwo(n){
+  let newArr = []
+  for (let i=0; i<=n; i++){
+    newArr.push(2**i) //Math.pow(2, i)
+  }
+  return newArr
+}
