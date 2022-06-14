@@ -338,3 +338,13 @@ function powersOfTwo(n){
   }
   return newArr
 }
+//Return a decision on whether the book contains good enough ideas displayed in an array
+function well(x){
+  if (x.filter(ideas => ideas === 'good').length > 2) {
+    return 'I smell a series!'
+  } else if (x.filter(ideas => ideas === 'good').length > 0) {
+    return 'Publish!'
+  } else {
+    return 'Fail!'
+  }
+}
