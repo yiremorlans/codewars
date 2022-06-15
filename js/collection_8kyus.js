@@ -348,3 +348,14 @@ function well(x){
     return 'Fail!'
   }
 }
+//Return the power of a number within the array by finding its index, check if the index given (n) exists in array.
+function index(array, n){
+  for (let i=0;i< array.length; i++) {
+    if (i === n) {
+     return Math.pow(array[i], n)
+    }
+    if (array[n] === undefined) {
+      return -1
+    }
+  }
+}
