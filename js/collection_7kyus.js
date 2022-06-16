@@ -81,3 +81,13 @@ function getMiddle(s){
     return s.slice(s.length/2, s.length/2 +1 )
   }  
 }
+//Return true/false whether str is isogram(no repeating letters), case sensitive
+function isIsogram(str){
+  let letters = str.toLowerCase().split('')
+  let newSet = [...new Set(letters)]
+    return letters.length === newSet.length
+}
+//same as
+function isIsogram(str){
+  return new Set(str.toUpperCase()).size == str.length;
+}
