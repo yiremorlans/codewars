@@ -73,3 +73,11 @@ function sumTwoSmallestNumbers(numbers) {
   const sorted = numbers.sort((a,b) => a-b)
   return sorted[0] + sorted[1]
 }
+//Return the middle char of the string. Even s.length should include 2 chars, odd include 1 char.
+function getMiddle(s){
+  if (s.length % 2 === 0) {
+    return s.slice(s.length/2 -1, s.length/2 +1)
+  } else {
+    return s.slice(s.length/2, s.length/2 +1 )
+  }  
+}
