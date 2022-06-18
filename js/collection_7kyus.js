@@ -91,3 +91,12 @@ function isIsogram(str){
 function isIsogram(str){
   return new Set(str.toUpperCase()).size == str.length;
 }
+//Find the sum of all int, positive and negative
+function getSum(...values)//turned params (a,b) into (...values) to include use Math.min/max in for loop
+{
+  let array = []
+  for (let i=Math.min(...values); i<=Math.max(...values); i++){
+    array.push(i)
+  }
+    return array.reduce((total, value) => total + value, 0)
+}
