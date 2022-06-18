@@ -363,9 +363,9 @@ const index = (array, n) => array.length > n ? Math.pow(array[n], n) : -1;
 
 //Convert the american elevator floor number system to european.
 function getRealFloor(n) {
-  if (n === 15) {
+  if (n === 15 || n > 13) {
     return n - 2
-  } else if (n > 0) {
+  } else if (n > 0 && n < 13) {
     return n - 1
   } else {
     return n
