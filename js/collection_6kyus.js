@@ -41,3 +41,14 @@ function createPhoneNumber(numbers){
     }  
     return format;
   }
+
+//Implement a function that returns an array of the elements in the same order, without repeating chars or nums.
+var uniqueInOrder=function(iterable){
+  let newArr = []
+  for(let i=0; i< iterable.length; i++){
+    if (iterable[i] !== iterable[i+1]) {
+      newArr.push(iterable[i])
+    }
+  }
+  return newArr
+}
