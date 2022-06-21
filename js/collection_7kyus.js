@@ -109,4 +109,22 @@ function leastLarger(a, i) {
   const leastLargeVal = Math.min(...largerVals)
   
   return a.findIndex(num => num === leastLargeVal)
+} //findIndex returns -1 if not found
+
+//
+function maskify(cc) {
+  if (cc.length <= 4) 
+    return cc
+
+  let masked = cc.split('').slice(0,-4).map(num => '#').join('')
+    return masked + cc.slice(-4)                              
+}
+//ALSO done with a for loop
+function maskify(cc) {
+  cc = cc.split("");
+  for(var i = 0; i < cc.length - 4; i++){
+    cc[i] = "#";
+}
+cc = cc.join("");
+return cc
 }
