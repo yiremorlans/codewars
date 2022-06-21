@@ -111,7 +111,7 @@ function leastLarger(a, i) {
   return a.findIndex(num => num === leastLargeVal)
 } //findIndex returns -1 if not found
 
-//
+//Your task is to write a function maskify, which changes all but the last four characters into '#'.
 function maskify(cc) {
   if (cc.length <= 4) 
     return cc
@@ -127,4 +127,8 @@ function maskify(cc) {
 }
 cc = cc.join("");
 return cc
+}
+//.padStart exists for this scenario
+function maskify(cc) {
+  return cc.slice(-4).padStart(cc.length,'#')
 }
