@@ -100,3 +100,13 @@ function getSum(...values)//turned params (a,b) into (...values) to include use 
   }
     return array.reduce((total, value) => total + value, 0)
 }
+//Given an array of numbers and an index, return either the index of the smallest number that is larger than the element at the given index, or -1 if there is no such index.
+const leastLarger = (a, i) => a.indexOf(Math.min(...a.filter(n => n > a[i])))
+//also like this solution
+function leastLarger(a, i) {
+  const targetVal = a[i]
+  const largerVals = a.filter(num => num > targetVal)
+  const leastLargeVal = Math.min(...largerVals)
+  
+  return a.findIndex(num => num === leastLargeVal)
+}
