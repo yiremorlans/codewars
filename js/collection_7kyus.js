@@ -132,3 +132,27 @@ return cc
 function maskify(cc) {
   return cc.slice(-4).padStart(cc.length,'#')
 }
+
+//Reverse the words in the sentence, preserve the spacing.
+function reverseWords(str) {
+  let reverseWords;
+  if (str.includes('  ')) {
+   reverseWords = str.split('  ')
+  } else {
+    reverseWords = str.split(' ')
+  }
+  
+   reverseWords = reverseWords.map(word => word.split('').reverse().join(''))
+  
+  if (str.includes('  ')) {
+    return reverseWords.join('  ')
+  } else {
+    return reverseWords.join(' ')
+  }
+}
+//split() and join() preserve the extra space automatically, split would create an empty ' ' in the array.
+function reverseWords(str) {
+  return str.split(' ').map(function(word){
+    return word.split('').reverse().join('');
+  }).join(' ');
+}
