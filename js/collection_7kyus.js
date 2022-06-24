@@ -156,3 +156,13 @@ function reverseWords(str) {
     return word.split('').reverse().join('');
   }).join(' ');
 }
+
+//Largest 5 digit number in a series of nums in a string.
+function solution(digits){
+  let testingArr = []
+  
+  for (let i = 0; i< digits.length ; i++) {
+    testingArr.push(digits.slice(i, i+5))
+  }
+  return Number(Math.max(...testingArr))
+}
