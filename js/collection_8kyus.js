@@ -371,3 +371,7 @@ function getRealFloor(n) {
     return n
   }
 }
+//Return the correct prompt with no typos or alternating cases in the name.
+function hello(name) {
+  return name ? `Hello, ${name[0].toUpperCase()}${name.slice(1).toLowerCase()}!` : `Hello, World!`
+}
