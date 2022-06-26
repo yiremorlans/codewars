@@ -375,3 +375,9 @@ function getRealFloor(n) {
 function hello(name) {
   return name ? `Hello, ${name[0].toUpperCase()}${name.slice(1).toLowerCase()}!` : `Hello, World!`
 }
+
+//Return a string with all the vowels removed.
+function shortcut (string) {
+  let vowels = ['a','e','i','o','u']
+  return string.split('').filter(letter => !vowels.includes(letter)).join('')
+}
