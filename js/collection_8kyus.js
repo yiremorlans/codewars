@@ -381,3 +381,7 @@ function shortcut (string) {
   let vowels = ['a','e','i','o','u']
   return string.split('').filter(letter => !vowels.includes(letter)).join('')
 }
+//Return the Nth even number.
+function nthEven(n){
+  return (n-1)*2;
+}
