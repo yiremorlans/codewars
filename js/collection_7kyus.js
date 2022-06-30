@@ -166,3 +166,7 @@ function solution(digits){
   }
   return Number(Math.max(...testingArr))
 }
+//Return an array of names whose length is only 4 characters.
+function friend(friends){
+  return friends.filter(name => name.length === 4)
+}

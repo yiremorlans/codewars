@@ -384,4 +384,4 @@ function shortcut (string) {
 //Return the Nth even number.
 function nthEven(n){
   return (n-1)*2;
-}
+}//return (n * 2) - 2;
