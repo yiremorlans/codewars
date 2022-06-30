@@ -170,3 +170,7 @@ function solution(digits){
 function friend(friends){
   return friends.filter(name => name.length === 4)
 }
+//Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, no repeating letters, taken from s1 + s2.
+function longest(...strings) {
+  return [...new Set(strings.join(''))].sort().join('')
+}//strings.join('') within new Set combines the array of two string into an array of no repeating letters.
