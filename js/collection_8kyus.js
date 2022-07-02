@@ -385,3 +385,17 @@ function shortcut (string) {
 function nthEven(n){
   return (n-1)*2;
 }//return (n * 2) - 2;
+//Remove the minimum value without mutating the array
+function removeSmallest(numbers) {
+  if (numbers.length === 0  || numbers === undefined) {
+    return []
+  }
+
+  let min = numbers.indexOf(Math.min(...numbers))
+  console.log(min)
+  return numbers.filter(function(number, index) {
+    if (index !== min) {
+      return number
+    }
+  })
+}
