@@ -174,3 +174,17 @@ function friend(friends){
 function longest(...strings) {
   return [...new Set(strings.join(''))].sort().join('')
 }//strings.join('') within new Set combines the array of two string into an array of no repeating letters.
+//Remove the minimum value without mutating the array
+function removeSmallest(numbers) {
+  if (numbers.length === 0  || numbers === undefined) {
+    return []
+  }
+
+  let min = numbers.indexOf(Math.min(...numbers))
+  console.log(min)
+  return numbers.filter(function(number, index) {
+    if (index !== min) {
+      return number
+    }
+  })
+}
