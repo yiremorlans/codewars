@@ -401,3 +401,8 @@ function closeCompare(a, b, margin = 0){//gave margin a default value of 0 in pa
 function take(arr, n) {
   return arr.slice(0, n)
 }
+
+//Remove the exclamation ! at the end of the string
+function remove (string) {
+  return string.endsWith('!') ? string.slice(0, -1) : string
+}
