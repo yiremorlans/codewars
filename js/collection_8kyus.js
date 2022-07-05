@@ -396,5 +396,8 @@ function closeCompare(a, b, margin = 0){//gave margin a default value of 0 in pa
   } else {
     return 1
   }
-  
+}
+//Take the first N elements
+function take(arr, n) {
+  return arr.slice(0, n)
 }
