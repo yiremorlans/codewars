@@ -406,3 +406,12 @@ function take(arr, n) {
 function remove (string) {
   return string.endsWith('!') ? string.slice(0, -1) : string
 }
+//Remove all the zeros at the end of the number.
+function noBoringZeros(n) {
+  let stringy = String(n)
+  while (stringy.endsWith('0')) {
+    stringy = stringy.slice(0,-1)
+    console.log(stringy)
+  }
+  return +stringy
+}
