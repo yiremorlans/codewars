@@ -415,3 +415,7 @@ function noBoringZeros(n) {
   }
   return +stringy
 }
+//Check if the given value is not a number, else do the equation with x
+function problem(x){
+  return typeof x === 'string' ? 'Error' : (x * 50) + 6
+}
