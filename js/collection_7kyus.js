@@ -199,3 +199,26 @@ function openOrSenior(data){
     }
   })
 }
+//Return the amount of pairs of gloves in an array.
+function numberOfPairs(gloves){
+  let pairsOfGloves = 0
+  let objHoldingGloves = {}
+
+  for (let i=0; i< gloves.length; i++) {
+    if (!objHoldingGloves[gloves[i]] ) { //checks if objHoldingGloves key exists
+      objHoldingGloves[gloves[i]] = 1   //assigns that particular glove [key] to value of 1
+    } else {
+      objHoldingGloves[gloves[i]] += 1 //if glove color already exists in object, add + 1 to it
+    }
+   
+    if(objHoldingGloves[gloves[i]] === 2){ //if glove color pair exists 
+      objHoldingGloves[gloves[i]] = 0 //empty the key
+      pairsOfGloves += 1  //add to counter
+    }
+  }
+  return pairsOfGloves
+}
+//Return true/false if str ends with endings params.
+function solution(str, ending){
+  return str.endsWith(ending)
+}
