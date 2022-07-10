@@ -222,3 +222,7 @@ function numberOfPairs(gloves){
 function solution(str, ending){
   return str.endsWith(ending)
 }
+//the toString function has been disabled. Return bool, string, num, and arrays into string form. 
+String.prototype.toString = function(){ 
+  return `${this}` //error I was making in code was function syntax and missing this keyword
+}
