@@ -52,3 +52,25 @@ var uniqueInOrder=function(iterable){
   }
   return newArr
 }
+//Find the odd int, return the int that appears odd amount of times.
+function findOdd(A) {
+  let objHoldingNums = {}
+  
+  for (let i=0; i< A.length; i++){ 
+    if (!objHoldingNums[A[i]]) {
+      objHoldingNums[A[i]] = 1
+    } else {
+      objHoldingNums[A[i]] += 1
+    }
+  }//goes through array and stores int with its iterations as values
+  
+  for (const [key, value] of Object.entries(objHoldingNums)) { //deconstructuring params to access both key/value
+    if (value % 2 !== 0) {
+      return +key //key is stored as string when placed in obj, so it must be returned as int
+    }
+  }//order of the array returned by Object.entries() is the same as that provided by a for in loop 
+}
+//Array method solutions
+function findOdd(arr) {
+  return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+}
