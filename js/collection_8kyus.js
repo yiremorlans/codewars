@@ -419,3 +419,7 @@ function noBoringZeros(n) {
 function problem(x){
   return typeof x === 'string' ? 'Error' : (x * 50) + 6
 }
+//Find the remainder. Return NaN if one of the values is 0.
+function remainder(...ints){ //originally was 2 params(a, b), used the spread syntax to use math.max/min
+  return Math.max(...ints) % Math.min(...ints)
+} //modulo automatically returns NaN if value is = 0
