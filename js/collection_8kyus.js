@@ -423,3 +423,37 @@ function problem(x){
 function remainder(...ints){ //originally was 2 params(a, b), used the spread syntax to use math.max/min
   return Math.max(...ints) % Math.min(...ints)
 } //modulo automatically returns NaN if value is = 0
+
+//Implement a Cube class,with a constructor. One taking an integer and one handling no given arguments!
+class Cube {
+  constructor(side = 0){
+    this.side = side
+  }
+  getSide() {
+    return this.side = Math.abs(this.side) 
+  }
+  setSide(n) {
+    this.side = n;
+  }
+}
+
+class Cube {
+  constructor(side) {
+    this.setSide(side)
+  }
+
+  getSide() {
+    return this.side
+  }
+  
+  setSide(side = 0) {
+    this.side = Math.abs(side)
+  }
+}
+//Color ghost. Return a random color assigned to new Ghost object.
+class Ghost {
+  constructor(color){
+    let colorsArr = ['white', 'yellow', 'purple', 'red']
+   return this.color = colorsArr[Math.floor(Math.random() * colorsArr.length)]
+  }
+}
