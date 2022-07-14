@@ -457,3 +457,8 @@ class Ghost {
    return this.color = colorsArr[Math.floor(Math.random() * colorsArr.length)]
   }
 }
+//Replace all the vowels with exclamation marks!
+function replace(s){
+  let vowels = ['a','e','i','o','u','A','E','I','O','U']
+  return s.split('').map(letter => vowels.includes(letter) ? '!' : letter ).join('')
+}
