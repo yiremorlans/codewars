@@ -465,7 +465,7 @@ function replace(s){
 //clever one liner
 const replace = w => (w.split('').map(e => 'aeiou'.includes(e.toLowerCase()) ? '!' : e)).join('');
 
-//Create a function that returns 5 without usisng any numbers 0-9
+//Create a function that returns 5 without using any numbers 0-9
 function unusualFive() {
   let countArr = ['red','orange','yellow', 'green', 'blue', 'purple']
     return countArr.lastIndexOf('purple')
