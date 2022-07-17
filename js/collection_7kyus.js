@@ -226,3 +226,10 @@ function solution(str, ending){
 String.prototype.toString = function(){ 
   return `${this}` //error I was making in code was function syntax and missing this keyword
 }
+//The coupon code: return if a coupon code is expired based on valid date and coupon code
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  return enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)
+}//two great solutions better than my nested If statement
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  return enteredCode===correctCode && new Date(currentDate) <= new Date(expirationDate);
+}
