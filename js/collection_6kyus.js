@@ -84,3 +84,37 @@ function likes(names) {
     default : return `${names[0]}, ${names[1]} and ${names.length -2} others like this`
     }
 }
+
+//Count characters in your string and return them as an object.
+function count (string) {  
+  let storageObj = {}
+  
+  if (string.length === 0) {
+    return {}
+  }
+
+  for (let i=0;i<string.length; i++){
+    if (!storageObj[string[i]]) {
+      storageObj[string[i]] = 1
+    } else {
+      storageObj[string[i]] += 1
+    }
+  }
+return storageObj
+}
+// great solution using reduce
+function count (string) {  
+  if (!string) return {};
+  return string.split('').reduce( function (tally, letter) {
+    tally[letter] = (tally[letter] || 0) + 1; //if tally[letter] exists +1, else create w/value of 0 + 1
+    return tally;
+  }, {});//return object value
+}
+//also good forEach solution with ternary
+function count (string) {  
+  var count = {};
+  string.split('').forEach(function(s) {
+     count[s] ? count[s]++ : count[s] = 1;
+  });
+  return count;
+}
