@@ -473,3 +473,7 @@ function unusualFive() {
 function unusualFive() {
   return 'fucku'.length
 }
+//Return the correct welcome prompt based on params even when name is an array of separate names.
+function sayHello( name, city, state ) {
+  return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+  }
