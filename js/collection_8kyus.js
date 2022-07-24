@@ -453,8 +453,7 @@ class Cube {
 //Color ghost. Return a random color assigned to new Ghost object.
 class Ghost {
   constructor(color){
-    let colorsArr = ['white', 'yellow', 'purple', 'red']
-   return this.color = colorsArr[Math.floor(Math.random() * colorsArr.length)]
+    let colorsArr = ['white', 'yellow', 'purple', 'red']   return this.color = colorsArr[Math.floor(Math.random() * colorsArr.length)]
   }
 }
 //Replace all the vowels with exclamation marks!
