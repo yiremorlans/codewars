@@ -122,3 +122,20 @@ function count (string) {
 function array_diff(a, b) {
   return a.filter(e => !b.includes(e));
 }
+// Sum of Digits / Digital root is the recursive sum of all the digits in a number. EX:
+//  16  -->  1 + 6 = 7
+//  942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+function digital_root(n) {
+  let reducedValue = String(n).split('').reduce((total, value) => +total + +value, 0)
+  while (reducedValue.toString().length > 1) {
+    reducedValue = String(reducedValue).split('').reduce((total, value) => +total + +value, 0)
+  } 
+  return reducedValue
+}
+//clever solution
+function digital_root(n) {
+  if (n < 10) return n;
+  
+  return digital_root(
+    n.toString().split('').reduce(function(acc, d) { return acc + +d; }, 0));
+}
