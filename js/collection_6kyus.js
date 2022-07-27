@@ -139,3 +139,7 @@ function digital_root(n) {
   return digital_root(
     n.toString().split('').reduce(function(acc, d) { return acc + +d; }, 0));
 }
+//Return a string where words greater than 4 chars in length are reversed.
+function spinWords(string){
+  return string.split(' ').map(word => word.length > 4 ? word.split('').reverse().join('') : word).join(' ')
+ }
