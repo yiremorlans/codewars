@@ -143,3 +143,28 @@ function digital_root(n) {
 function spinWords(string){
   return string.split(' ').map(word => word.length > 4 ? word.split('').reverse().join('') : word).join(' ')
  }
+ //Count the number of duplicates. Return the amount of chars that appear more than once.
+ function duplicateCount(text){
+  text = text.toLowerCase()
+  
+  let objHoldingValues = {}
+  //if iterable value doesn't exist in obj, add it and assign 1, else += 1
+  for (let i = 0; i<text.length; i++){ 
+    if (!objHoldingValues[text[i]]) {
+      objHoldingValues[text[i]] = 1
+    } else {
+      objHoldingValues[text[i]] += 1
+    }
+  }
+  
+  let newArr = []
+  //iterate through keys in obj, if value was tallied more than once, add it to array
+  for (const key in objHoldingValues){
+    if (objHoldingValues[key] > 1) {
+      newArr.push(key)
+    }
+  }
+  //array will contain each instance that appeared more than once
+  return newArr.length
+}
+
