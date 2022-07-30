@@ -167,4 +167,3 @@ function spinWords(string){
   //array will contain each instance that appeared more than once
   return newArr.length
 }
-

@@ -233,3 +233,9 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
 function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
   return enteredCode===correctCode && new Date(currentDate) <= new Date(expirationDate);
 }
+//Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+function sumDigits(number) {
+  let absole = Math.abs(number)
+  let stringNumToArr = String(absole).split('').map(value => +value)
+  return stringNumToArr.reduce((total, num) => total + num, 0)
+}
