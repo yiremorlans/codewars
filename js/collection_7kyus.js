@@ -239,3 +239,7 @@ function sumDigits(number) {
   let stringNumToArr = String(absole).split('').map(value => +value)
   return stringNumToArr.reduce((total, num) => total + num, 0)
 }
+//Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order.
+function flattenAndSort(array) {
+  return array.flat().sort((a,b) => a-b)
+}
