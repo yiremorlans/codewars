@@ -476,3 +476,8 @@ function unusualFive() {
 function sayHello( name, city, state ) {
   return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
   }
+
+//Take the derivative
+function derive(coefficient,exponent) {
+  return `${coefficient*exponent}x^${exponent-1}`
+}
