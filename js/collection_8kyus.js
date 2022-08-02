@@ -481,3 +481,9 @@ function sayHello( name, city, state ) {
 function derive(coefficient,exponent) {
   return `${coefficient*exponent}x^${exponent-1}`
 }
+
+//Remove the first and last character
+function array(str){
+  str = str.split(',')
+  return str.length === 0 || str.length <= 2 ? null : str.slice(1,-1).join(' ')
+}
