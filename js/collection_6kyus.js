@@ -167,3 +167,13 @@ function spinWords(string){
   //array will contain each instance that appeared more than once
   return newArr.length
 }
+
+//Write a function that takes a positive number and returns the amount of times its multiplicative persistance.
+function persistence(num) {
+  let countArr = []
+  while (num > 9) {
+    num = num.toString().split('').reduce((total, value)=> total * +value, 1)
+    countArr.push(num)
+  }
+  return countArr.length
+}
