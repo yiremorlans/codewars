@@ -168,7 +168,7 @@ function spinWords(string){
   return newArr.length
 }
 
-//Write a function that takes a positive number and returns the amount of times its multiplicative persistance.
+// Write a function that takes a positive number and returns the amount of times its multiplicative persistance.
 function persistence(num) {
   let countArr = []
   while (num > 9) {
@@ -178,7 +178,7 @@ function persistence(num) {
   return countArr.length
 }
 
-//Write a function that returns the only even or odd value in array full of even and odd integers.
+// Write a function that returns the only even or odd value in array full of even and odd integers.
 function findOutlier(integers){
   let evenNums = []
   let oddNums = []
@@ -186,14 +186,12 @@ function findOutlier(integers){
   return evenNums.length > oddNums.length ? oddNums[0] : evenNums[0]
 }
 
-//Write a function that returns true/false if the directions in arr ('n','s','e','w') takes exactly 10 minutes(each char takes 1 min) and leads back to start.
+// Write a function that returns true/false if the directions in arr ('n','s','e','w') takes exactly 10 minutes(each char takes 1 min) and leads back to start.
 function isValidWalk(walk) {
-  for (let i=0; i< walk.length; i++) {
     if (walk.length === 10) {
-    return walk.join('').split('n').length === walk.join('').split('s').length && 
-           walk.join('').split('w').length === walk.join('').split('e').length 
-    } else {
-      return false
-    }
- }
+      return walk.join('').split('n').length === walk.join('').split('s').length && 
+            walk.join('').split('w').length === walk.join('').split('e').length 
+      } else {
+        return false
+      }
 }
