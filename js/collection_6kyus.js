@@ -177,3 +177,11 @@ function persistence(num) {
   }
   return countArr.length
 }
+
+//Write a function that returns the only even or odd value in array full of even and odd integers.
+function findOutlier(integers){
+  let evenNums = []
+  let oddNums = []
+  integers.filter(value => value % 2 === 0 ? evenNums.push(value) : oddNums.push(value))
+  return evenNums.length > oddNums.length ? oddNums[0] : evenNums[0]
+}
