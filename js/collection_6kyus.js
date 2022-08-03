@@ -185,3 +185,15 @@ function findOutlier(integers){
   integers.filter(value => value % 2 === 0 ? evenNums.push(value) : oddNums.push(value))
   return evenNums.length > oddNums.length ? oddNums[0] : evenNums[0]
 }
+
+//Write a function that returns true/false if the directions in arr ('n','s','e','w') takes exactly 10 minutes(each char takes 1 min) and leads back to start.
+function isValidWalk(walk) {
+  for (let i=0; i< walk.length; i++) {
+    if (walk.length === 10) {
+    return walk.join('').split('n').length === walk.join('').split('s').length && 
+           walk.join('').split('w').length === walk.join('').split('e').length 
+    } else {
+      return false
+    }
+ }
+}
