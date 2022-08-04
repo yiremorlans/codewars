@@ -243,3 +243,10 @@ function sumDigits(number) {
 function flattenAndSort(array) {
   return array.flat().sort((a,b) => a-b)
 }
+
+//In a press that includes letters up to m, return the amount of errors to str length.
+function printerError(s) {
+  let printerLetters = 'abcdefghijklm'
+  let errorMarks = s.split('').filter(letter => !printerLetters.includes(letter))
+  return `${errorMarks.length}/${s.length}`
+}
