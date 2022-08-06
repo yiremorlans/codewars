@@ -6,7 +6,6 @@ var containsDuplicate = function(nums) {
 var isAnagram = function(s, t) {
     let newSortS = s.split('').sort()
     let newSortT = t.split('').sort()
-    console.log(newSortS, newSortT)
     return newSortS.join('') === newSortT.join('')
 };
 //receiving two str containing only lowercase letters
