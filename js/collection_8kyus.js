@@ -487,3 +487,14 @@ function array(str){
   str = str.split(',')
   return str.length === 0 || str.length <= 2 ? null : str.slice(1,-1).join(' ')
 }
+
+// Create a function that combines one letter at a time from three str inputs to form one new str.
+function tripleTrouble(one, two, three){
+  let finalWords = ''
+  for (let i=0;i<one.length; i++){
+    finalWords += one[i]
+    finalWords += two[i]
+    finalWords += three[i]
+  }
+  return finalWords
+ }
