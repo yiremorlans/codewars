@@ -498,3 +498,8 @@ function tripleTrouble(one, two, three){
   }
   return finalWords
  }
+
+ // Create a function that returns an array of the str with the length added to each word.
+ function addLength(str) {
+  return str.split(' ').map(word => word + ' ' + word.length)
+}
