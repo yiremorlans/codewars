@@ -195,3 +195,23 @@ function isValidWalk(walk) {
         return false
       }
 }
+// Duplicate encoder. Create a function that encodes chars in str to '(' if appears once and ')' for more than once. Ignore the case difference.
+function duplicateEncode(word){
+  let map = new Map
+  let returnStr = ''
+  for (let i=0; i<word.length; i++) {
+    if (!map[word[i].toLowerCase()]) { //ensures prop is written to hashmap as lowercase
+      map[word[i].toLowerCase()] = 1
+    } else {
+      map[word[i].toLowerCase()] += 1
+    }    
+}
+ for (let i=0; i<word.length; i++){ //writes encoding thru str.length
+    if (map[word[i].toLowerCase()] > 1) { 
+      returnStr += ')'
+    } else {
+      returnStr += '('
+    }     
+  }
+  return returnStr  
+}
