@@ -503,3 +503,8 @@ function tripleTrouble(one, two, three){
  function addLength(str) {
   return str.split(' ').map(word => word + ' ' + word.length)
 }
+
+// Multiple of index. Create a function that returns a new array of only the integers that are multiples of their index
+function multipleOfIndex(array) {
+  return array.filter((value, index)=> Number.isInteger(value/index))
+}
