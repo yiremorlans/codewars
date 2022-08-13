@@ -508,3 +508,9 @@ function tripleTrouble(one, two, three){
 function multipleOfIndex(array) {
   return array.filter((value, index)=> Number.isInteger(value/index))
 }
+
+// Return the youngest, oldest, and difference between the two ages in an array
+function differenceInAges(ages){
+  let sortedAges = ages.sort((a,b)=> a-b)
+  return [sortedAges[0], sortedAges[sortedAges.length -1], sortedAges[sortedAges.length -1]-sortedAges[0] ]
+}//alternative to Math.min() and Math.max()
