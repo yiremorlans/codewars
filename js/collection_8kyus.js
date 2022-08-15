@@ -514,3 +514,8 @@ function differenceInAges(ages){
   let sortedAges = ages.sort((a,b)=> a-b)
   return [sortedAges[0], sortedAges[sortedAges.length -1], sortedAges[sortedAges.length -1]-sortedAges[0] ]
 }//alternative to Math.min() and Math.max()
+
+// Create a function that returns the player's health - damage received. Player's health cannot go below 0
+function combat(health, damage) {
+  return health < damage ? 0 : health - damage
+}
