@@ -519,3 +519,7 @@ function differenceInAges(ages){
 function combat(health, damage) {
   return health < damage ? 0 : health - damage
 }
+// Create a function that converts USD to Chinese Yuan as a string with fixed decimal place
+function usdcny(usd) {
+  return `${(usd * 6.75).toFixed(2)} Chinese Yuan`
+}
