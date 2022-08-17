@@ -523,3 +523,14 @@ function combat(health, damage) {
 function usdcny(usd) {
   return `${(usd * 6.75).toFixed(2)} Chinese Yuan`
 }
+// Populate an array with 'codewars' 1000 times
+var websites = []
+function arrayPopulator () { //did not need the function, a while loop would have sufficed
+  while (websites.length !== 1000) {
+    websites.push('codewars')
+  }
+}
+
+arrayPopulator()
+// Array method .fill will populate an array with a value
+var websites = new Array(1000).fill("codewars");
