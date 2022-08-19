@@ -534,3 +534,8 @@ function arrayPopulator () { //did not need the function, a while loop would hav
 arrayPopulator()
 // Array method .fill will populate an array with a value
 var websites = new Array(1000).fill("codewars");
+
+// Create a function that determines whether the sentence includes the word 'english'
+function spEng(sentence){
+  return sentence.toLowerCase().includes('english')
+}
