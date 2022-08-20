@@ -250,3 +250,8 @@ function printerError(s) {
   let errorMarks = s.split('').filter(letter => !printerLetters.includes(letter))
   return `${errorMarks.length}/${s.length}`
 }
+
+// Sort the numbers in an array, account for empty or null.
+function solution(nums){
+  return nums === null ? [] : nums.sort((a,b)=> a-b)
+}
