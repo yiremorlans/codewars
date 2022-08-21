@@ -255,3 +255,9 @@ function printerError(s) {
 function solution(nums){
   return nums === null ? [] : nums.sort((a,b)=> a-b)
 }
+
+// Create a function that determines if the integers provided form a triangle.
+function isTriangle(...nums){
+  let sorted = [...nums].sort((a,b)=> a-b) 
+  return sorted[0] + sorted[1]  > sorted[2]
+}
