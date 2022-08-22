@@ -261,3 +261,14 @@ function isTriangle(...nums){
   let sorted = [...nums].sort((a,b)=> a-b) 
   return sorted[0] + sorted[1]  > sorted[2]
 }
+// Factorial factory. Create a function that multiplies all the ints up to n.
+function factorial (n) {
+  let factorialArr = []
+  if (n < 0) {
+    return null
+  }
+  for (let i=1; i<=n; i++) {
+    factorialArr.push(i)
+  }
+  return factorialArr.reduce((total, value)=> total * value, 1)
+}
