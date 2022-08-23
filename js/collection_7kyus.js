@@ -272,3 +272,8 @@ function factorial (n) {
   }
   return factorialArr.reduce((total, value)=> total * value, 1)
 }
+
+// Create a function that filters out all odd numbers.
+function getEvenNumbers(numbersArray){
+  return numbersArray.filter(value => value % 2 === 0)
+}
