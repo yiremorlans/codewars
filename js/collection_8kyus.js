@@ -539,3 +539,8 @@ var websites = new Array(1000).fill("codewars");
 function spEng(sentence){
   return sentence.toLowerCase().includes('english')
 }
+
+//Create a function that combines two params as one string
+function combineNames(first, last){
+  return `${first} ${last}`
+}
