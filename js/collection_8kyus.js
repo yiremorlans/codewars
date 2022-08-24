@@ -549,3 +549,16 @@ function combineNames(first, last){
 var TempleStrings = function(obj, feature) {
   return `${obj} are ${feature}`
 }
+
+// Create a function that fills an entire text str with the given char
+function contamination(text, char){
+  let aiContam = ''
+    for (let i=0; i<text.length; i++){
+       aiContam += char
+    }
+  return aiContam
+}
+// clever codewars solution
+function contamination(text, char){
+  return char.repeat(text.length)
+}
