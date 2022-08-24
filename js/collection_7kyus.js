@@ -277,3 +277,17 @@ function factorial (n) {
 function getEvenNumbers(numbersArray){
   return numbersArray.filter(value => value % 2 === 0)
 }
+
+//Fix string case by which has greater occurance of specific case
+function solve(s){
+  let upperCase = 0
+  let lowerCase = 0
+  for(let i=0; i< s.length; i++){
+    if(s[i] === s[i].toUpperCase()) {
+      upperCase += 1
+    } else {
+      lowerCase += 1
+    }
+  }
+return upperCase > lowerCase ? s.toUpperCase() : s.toLowerCase()
+}
