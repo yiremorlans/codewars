@@ -544,3 +544,8 @@ function spEng(sentence){
 function combineNames(first, last){
   return `${first} ${last}`
 }
+
+//Create a function using template string to return full sentence
+var TempleStrings = function(obj, feature) {
+  return `${obj} are ${feature}`
+}
