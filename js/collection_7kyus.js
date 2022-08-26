@@ -291,3 +291,19 @@ function solve(s){
   }
 return upperCase > lowerCase ? s.toUpperCase() : s.toLowerCase()
 }
+
+// Create a function that cleans a str from '#' and chars that preceed '#'
+function cleanString(s) {
+  let newArr = []
+  //loop thru str and push char if not #, when confronted with # in str, remove val from arr.
+  for(let i=0; i<s.length; i++){
+    if (s[i] == '#'){
+      if (newArr.length > 0) { 
+        newArr.pop() 
+      }
+    } else { 
+      newArr.push(s[i])
+    }
+  }
+  return newArr.join('')
+}
