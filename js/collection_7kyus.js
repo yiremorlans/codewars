@@ -292,7 +292,7 @@ function solve(s){
 return upperCase > lowerCase ? s.toUpperCase() : s.toLowerCase()
 }
 
-// Create a function that cleans a str from '#' and chars that preceed '#'
+// Create a function that cleans a str from '#' and chars that preceeded '#'
 function cleanString(s) {
   let newArr = []
   //loop thru str and push char if not #, when confronted with # in str, remove val from arr.
@@ -307,3 +307,11 @@ function cleanString(s) {
   }
   return newArr.join('')
 }
+//Anagram detection
+var isAnagram = function(test, original) {
+  let sortedTest = test.toLowerCase().split('').sort().join('')
+  let sortedOr = original.toLowerCase().split('').sort().join('')
+  return sortedTest === sortedOr
+};
+
+
