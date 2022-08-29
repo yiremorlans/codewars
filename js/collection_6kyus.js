@@ -215,3 +215,25 @@ function duplicateEncode(word){
   }
   return returnStr  
 }
+
+// Title Case. Create a function that returns title case for a string, except for specific words
+function titleCase(title, minorWords) {
+  if (title.length === 0){
+    return ''
+  }
+  if (minorWords === undefined){
+    return title.toLowerCase().split(' ').map(value => value.split('')[0].toUpperCase() + value.slice(1)).join(' ')
+  }
+  
+  let titleArr = title.toLowerCase().split(' ')
+    titleArr = titleArr.map(function(value,index) {
+      if (index !== 0 && minorWords.toLowerCase().split(' ').includes(value)) {
+        // array.prototype.includes() and string.prototype.includes() are different!! arr.includes() returns exact match
+        //str.includes() scans the entire string for chars containing letter. Both are case-sensitive
+        return value.toLowerCase()
+       } else {
+         return value.split('')[0].toUpperCase() + value.slice(1)
+       }     
+  })
+  return titleArr.join(' ')
+}
