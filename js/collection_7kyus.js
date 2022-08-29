@@ -314,4 +314,13 @@ var isAnagram = function(test, original) {
   return sortedTest === sortedOr
 };
 
-
+// Create a function that returns an array of indices of capital letters in a string.
+var capitals = function (word) {
+  let newArr = []
+  for (let i=0; i< word.length; i++){
+    if (word[i] === word[i].toUpperCase()) {
+      newArr.push(i)
+    }
+  }
+  return newArr
+};
