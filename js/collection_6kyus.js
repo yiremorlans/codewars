@@ -220,10 +220,10 @@ function duplicateEncode(word){
 function titleCase(title, minorWords) {
   if (title.length === 0){
     return ''
-  }
+  } //edge case for empty str
   if (minorWords === undefined){
     return title.toLowerCase().split(' ').map(value => value.split('')[0].toUpperCase() + value.slice(1)).join(' ')
-  }
+  } //edge case for title passed, but no minorWords argument
   
   let titleArr = title.toLowerCase().split(' ')
     titleArr = titleArr.map(function(value,index) {

@@ -324,3 +324,21 @@ var capitals = function (word) {
   }
   return newArr
 };
+
+// Alternate capitalization
+function capitalize(s){
+  let startUpperCase = ''
+  let startLowerCase = ''
+  
+  for (let i=0; i<s.length; i++) {
+    if (i % 2 === 0){
+      startUpperCase += s[i].toUpperCase()
+      startLowerCase += s[i].toLowerCase()
+    } else {
+      startUpperCase += s[i].toLowerCase()
+      startLowerCase += s[i].toUpperCase()
+    }
+
+  }
+  return [startUpperCase, startLowerCase]
+};
