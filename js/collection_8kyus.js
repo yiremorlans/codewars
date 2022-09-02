@@ -562,3 +562,8 @@ function contamination(text, char){
 function contamination(text, char){
   return char.repeat(text.length)
 }
+
+// Create a function that returns an array from the string that includes the name and the first two letters of the name in an array.
+function whoIsPaying(name){ 
+  return name.length > 2 ? [name, name[0]+name[1]] : [name]
+}
