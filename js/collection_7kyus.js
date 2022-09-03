@@ -353,3 +353,16 @@ function removeDuplicateWords (s) {
  var greet = function(name) {
   return `Hello ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`
 };
+
+// Create a function that counts n of bumps in string.
+function bump(x){
+  let bumpIts = 0
+  for (let i=0; i<x.length; i++){
+    if (x[i] === 'n') {
+      bumpIts += 1
+    }
+  }
+  return bumpIts > 15 ? 'Car Dead' : 'Woohoo!'
+}
+// Clever one liner using split by n
+const bump=x=>x.split('n').length>16?"Car Dead":"Woohoo!"
