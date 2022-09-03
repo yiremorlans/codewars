@@ -348,3 +348,8 @@ function removeDuplicateWords (s) {
   let newWords = s.split(' ')
   return [...new Set(newWords)].join(' ')
  }// return Array.from(set).join(' '); is same as ^^^
+
+ // Create a custom greeting function
+ var greet = function(name) {
+  return `Hello ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`
+};
