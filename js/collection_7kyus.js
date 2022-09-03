@@ -342,3 +342,9 @@ function capitalize(s){
   }
   return [startUpperCase, startLowerCase]
 };
+
+// Remove duplicate words from a string
+function removeDuplicateWords (s) {
+  let newWords = s.split(' ')
+  return [...new Set(newWords)].join(' ')
+ }// return Array.from(set).join(' '); is same as ^^^
