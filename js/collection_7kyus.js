@@ -382,3 +382,13 @@ function sortGiftCode(code){
   return code.split('').sort().join('')
 }
 //sort((a-b)=> a-b) for numbers and sort() for letters
+
+// Collatz conjecture function performs operation on n to reduce down to 1. Return the length
+function collatz(n) {
+  let counter = 1
+  while (n > 1) {
+    counter ++
+    n = n % 2 === 0 ? n / 2 : (n * 3) + 1
+  }
+  return counter 
+}
