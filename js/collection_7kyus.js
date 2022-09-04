@@ -376,3 +376,9 @@ function removeUrlAnchor(url){
     return url
   }  
 } // return url.split('#')[0] also works
+
+// Sort gift code in alphabetical order
+function sortGiftCode(code){
+  return code.split('').sort().join('')
+}
+//sort((a-b)=> a-b) for numbers and sort() for letters
