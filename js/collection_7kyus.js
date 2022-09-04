@@ -366,3 +366,13 @@ function bump(x){
 }
 // Clever one liner using split by n
 const bump=x=>x.split('n').length>16?"Car Dead":"Woohoo!"
+
+// Remove everything after the # in the url.
+function removeUrlAnchor(url){
+  if (url.includes('#')) {
+    let octoIndex = url.indexOf('#')
+    return url.slice(0, octoIndex)
+  } else {
+    return url
+  }  
+} // return url.split('#')[0] also works
