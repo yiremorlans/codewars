@@ -237,3 +237,16 @@ function titleCase(title, minorWords) {
   })
   return titleArr.join(' ')
 }
+
+// Replace with alphabet position. Take case and punctuation into account
+function alphabetPosition(text) {
+  let alphabetStr = 'abcdefghijklmnopqrstuvwxyz'
+  let sanitizedText = text.toLowerCase().split('').filter(value => alphabetStr.includes(value)).join('')
+  let resultStr = ''
+
+  
+  for (let i=0; i<sanitizedText.length; i++){
+    resultStr += alphabetStr.indexOf(sanitizedText[i]) + 1 + ' ' 
+  }
+  return resultStr.trim()
+}
