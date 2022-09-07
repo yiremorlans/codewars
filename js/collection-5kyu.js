@@ -30,3 +30,17 @@ function incrementString (strng) {
 return zeroCount > 0 ? lettersArray.join("") + "0".repeat(zeroCount) + numStr : 
 lettersArray.join("") + numStr;
 }
+
+// Move all the zeros from an array to the end, preserving the order of the original array
+function moveZeros(arr) {
+  let noZeros = []
+  const zeros = []
+  for (let i=0; i< arr.length; i++){
+    if (arr[i] === 0) {
+      zeros.push(0)
+    } else {
+      noZeros.push(arr[i])
+    }
+  }
+  return noZeros.concat(zeros)
+}
