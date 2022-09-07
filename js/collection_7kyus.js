@@ -403,3 +403,8 @@ function findLongest(array){
 
   return array[resultIndex]    
 }
+
+// Return if the sum of all ints in the array is even or odd
+function oddOrEven(array) {
+  return array.reduce((total, value) => total + value, 0) % 2 === 0 ? 'even' : 'odd'
+}
