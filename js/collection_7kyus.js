@@ -392,3 +392,14 @@ function collatz(n) {
   }
   return counter 
 }
+
+// Create a function that returns the first longest digit int in an array
+function findLongest(array){
+  let numberLength = array.map(value => value.toString().length)
+
+  let longestLength = Math.max(...numberLength)
+
+  let resultIndex = numberLength.indexOf(longestLength)
+
+  return array[resultIndex]    
+}
