@@ -408,3 +408,8 @@ function findLongest(array){
 function oddOrEven(array) {
   return array.reduce((total, value) => total + value, 0) % 2 === 0 ? 'even' : 'odd'
 }
+
+// Return the min and max of ints in an array as an array
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)]
+}
