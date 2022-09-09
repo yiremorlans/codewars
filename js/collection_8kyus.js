@@ -568,3 +568,16 @@ function whoIsPaying(name){
   return name.length > 2 ? [name, name[0]+name[1]] : [name]
 }
 
+// Check the array for char code at vowels and return new array with letter in place
+function isVow(a){
+  let resultArr = []
+  let vowelValues = [97, 101, 105, 111, 117]
+  for (let i=0; i<a.length; i++){
+    if (vowelValues.includes(a[i])) {
+      resultArr.push(String.fromCharCode(a[i]))
+    } else {
+      resultArr.push(a[i])
+    }
+  }
+  return resultArr
+}
