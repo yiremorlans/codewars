@@ -581,3 +581,17 @@ function isVow(a){
   }
   return resultArr
 }
+
+// Create a function that returns the player element given at goose n
+function duckDuckGoose(players, goose) {
+  return players[(goose-1) % players.length].name 
+}
+
+// Return first n number of elements in the array
+function first(arr, n) {
+  if (n == 0) {
+    return []
+  } else {
+    return n == undefined ? arr.slice(0,1) : arr.slice(0,n)
+  } 
+}
