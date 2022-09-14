@@ -430,3 +430,9 @@ function dontGiveMeFive(start, end){
   }
   return res.length;
 }
+
+// Return the two oldest ages in an array
+function twoOldestAges(ages){
+  let sortedAges = ages.sort((a,b) => b-a)
+  return [sortedAges[1], sortedAges[0]]
+}
