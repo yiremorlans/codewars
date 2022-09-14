@@ -422,3 +422,11 @@ function dontGiveMeFive(start, end) {
   newArr = newArr.filter(value => value.split('').includes('5') ? '' : value)
   return newArr.length
 }
+// ALTERNATIVE SOLUTION 
+function dontGiveMeFive(start, end){
+  let res = [];
+  for (let i = start; i <= end; i++) {
+    if (!i.toString().includes('5')) res.push(i);
+  }
+  return res.length;
+}
