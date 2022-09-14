@@ -413,3 +413,12 @@ function oddOrEven(array) {
 function minMax(arr){
   return [Math.min(...arr), Math.max(...arr)]
 }
+// Create a function that counts all the integers from start - end without fives
+function dontGiveMeFive(start, end) {
+  let newArr = []
+  for (let i=start; i<=end; i++){
+      newArr.push(i.toString())
+  }
+  newArr = newArr.filter(value => value.split('').includes('5') ? '' : value)
+  return newArr.length
+}
