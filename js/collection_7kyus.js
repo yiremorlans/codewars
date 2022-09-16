@@ -436,3 +436,10 @@ function twoOldestAges(ages){
   let sortedAges = ages.sort((a,b) => b-a)
   return [sortedAges[1], sortedAges[0]]
 }
+
+// Create a function that returns true/false if ever value is below given limit
+function smallEnough(a, limit){
+  let belowLimit = (value) => value <= limit
+  return a.every(belowLimit)
+  // return a.every(value => value <= limit)
+ } 
