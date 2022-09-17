@@ -443,3 +443,11 @@ function smallEnough(a, limit){
   return a.every(belowLimit)
   // return a.every(value => value <= limit)
  } 
+
+// Return the index of the middle number in a triplet array
+function gimme (triplet) {
+  let tripletCopy = triplet.slice()
+  tripletCopy = tripletCopy.sort((a,b) => a-b)
+  let middleNum = tripletCopy[1]
+  return triplet.indexOf(middleNum)
+}
