@@ -451,3 +451,11 @@ function gimme (triplet) {
   let middleNum = tripletCopy[1]
   return triplet.indexOf(middleNum)
 }
+
+// Create a function that returns the values in an array as an object key value pairs in array
+var number=function(array){
+  if (array.length === 0) {
+    return []
+    }
+  return array.map((element, index)=> `${index +1}: ${element}`)
+}
