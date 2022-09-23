@@ -595,3 +595,17 @@ function first(arr, n) {
     return n == undefined ? arr.slice(0,1) : arr.slice(0,n)
   } 
 }
+
+// Leetcode challege EASY level. Kids With the Greatest number of candies
+var kidsWithCandies = function(candies, extraCandies) {
+  console.log(Math.max(...candies))
+  let newArr = []
+  for (let i=0; i<candies.length; i++){
+      if (candies[i] + extraCandies >= Math.max(...candies)) {
+          newArr.push(true)
+      } else {
+          newArr.push(false)
+      }
+  }
+  return newArr
+};
