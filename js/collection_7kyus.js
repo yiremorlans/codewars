@@ -476,3 +476,29 @@ function fizzbuzz(n){
  }
   return fizzBuzzArray
 } 
+// Row weights
+function rowWeights(array){
+  let teamTwo = []
+  let teamOne = []
+  array.map(function(value, index){
+    if (index % 2 !== 0) {
+      teamTwo.push(value)
+    } else {
+      teamOne.push(value)
+    } 
+  })
+  return [teamOne.reduce((total, value)=> total + value, 0),teamTwo.reduce((total, value)=> total + value, 0)]
+}
+// Solution on one loop
+function rowWeights(array){
+  let teamOne = 0
+  let teamTwo = 0
+  for (let i=0; i< array.length; i++){
+    if (i % 2 !== 0){
+      teamTwo += array[i]
+    } else {
+      teamOne += array[i]
+    }
+  }
+  return [teamOne, teamTwo]
+}
