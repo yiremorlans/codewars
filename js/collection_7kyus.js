@@ -502,3 +502,8 @@ function rowWeights(array){
   }
   return [teamOne, teamTwo]
 }
+
+// Sort in lexicographical order
+sortme = function(names){
+  return names.sort()
+}
