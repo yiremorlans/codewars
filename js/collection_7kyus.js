@@ -517,3 +517,20 @@ function adjacentElementsProduct(array) {
   }
   return Math.max(...productArr)
 }
+
+// Create four functions that return different sections and indices in an array 
+const head = (array) => {
+  return array[0]
+}
+
+const tail = (array) => {
+  return array.slice(1)
+}
+
+const init = (array) => {
+  return array.slice(0, -1)
+}
+
+const last = (array) => {
+    return array[array.length -1]
+}
