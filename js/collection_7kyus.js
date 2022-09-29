@@ -507,3 +507,13 @@ function rowWeights(array){
 sortme = function(names){
   return names.sort()
 }
+
+// Create a function that returns the maximum product of two consecutive integers in an array
+function adjacentElementsProduct(array) {
+  let productArr = []
+  for (let i=0; i<array.length-1; i++){
+    let product = array[i] * array[i+1]
+    productArr.push(product)
+  }
+  return Math.max(...productArr)
+}
