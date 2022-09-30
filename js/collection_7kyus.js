@@ -534,3 +534,16 @@ const init = (array) => {
 const last = (array) => {
     return array[array.length -1]
 }
+
+// Create a function that sorts language test results of an object into an array with highest scoring languages
+function myLanguages(results) {
+  let lanArr = []
+  //objects cannot be sorted, so Object.entries returns an array of array key,value pairs which can then be sorted by their index
+  for (const [key, value] of Object.entries(results)){
+    if (value >= 60) {
+      lanArr.push([key,value])
+    }
+  } 
+  lanArr.sort((a,b)=> b[1] - a[1])
+  return lanArr.map(value => value[0])
+}
