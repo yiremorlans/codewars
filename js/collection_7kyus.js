@@ -547,3 +547,18 @@ function myLanguages(results) {
   lanArr.sort((a,b)=> b[1] - a[1])
   return lanArr.map(value => value[0])
 }
+
+// Create a function that totals str ints and num ints and returns the result from subtracting the two totals.
+function divCon(x){
+  let strInt = 0
+  let intType = 0
+  x.map(value => {
+    if (typeof value === 'string') {
+      strInt += +value
+    } else {
+      intType += value
+    }
+  })
+  
+  return intType - strInt
+}
