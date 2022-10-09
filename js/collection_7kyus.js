@@ -562,3 +562,23 @@ function divCon(x){
   
   return intType - strInt
 }
+
+// Write a function that returns whether a number is balanced or unbalanced
+function balancedNum(number){
+  if (String(number).length < 3) {
+    return 'Balanced'
+  } 
+ let head = ''
+ let tail = ''
+  if (String(number).length % 2 === 0) {
+    head = String(number).slice(0, (String(number).length / 2) -1 )
+    tail = String(number).slice((String(number).length / 2) + 1 )
+  } else {
+    head = String(number).slice(0, (String(number).length / 2) )
+    tail = String(number).slice((String(number).length / 2) + 1 )
+  }
+
+  return head.split('').reduce((total, current)=> total + +current, 0) === 
+          tail.split('').reduce((total, current)=> total + +current, 0) ? 'Balanced' : 'Not Balanced'
+}
+
