@@ -582,3 +582,13 @@ function balancedNum(number){
           tail.split('').reduce((total, current)=> total + +current, 0) ? 'Balanced' : 'Not Balanced'
 }
 
+// Write a function that returns the total amount of people left over from a bus in an array of array pairs --> [10,0], [3,4], [5,6]
+
+var number = function(busStops){
+  let total = 0
+  for (let key in busStops){
+    total += busStops[key][0]
+    total -= busStops[key][1]
+  }
+  return total
+}
