@@ -592,3 +592,28 @@ var number = function(busStops){
   }
   return total
 }
+
+// Create a function that returns the sum of the values that only appear once in the array
+function repeats(array) {
+	let intMap = {}
+	for (let value of array) {
+		if (!intMap.hasOwnProperty(value)) {
+			intMap[value] = 1
+		} else {
+			intMap[value] += 1
+		}
+	}
+	let valuesArr = []
+	for (let [key,value] of Object.entries(intMap)){
+			if (value === 1) {
+				valuesArr.push(+key)
+			}
+		}
+	return valuesArr.reduce((total, value) => total + value, 0)
+}
+
+
+function repeats(array){
+	return array.filter(value => array.indexOf(value) === array.lastIndexOf(value)).reduce((total, value)=> total + value, 0)
+	
+}
