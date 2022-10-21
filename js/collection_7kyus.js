@@ -617,3 +617,9 @@ function repeats(array){
 	return array.filter(value => array.indexOf(value) === array.lastIndexOf(value)).reduce((total, value)=> total + value, 0)
 	
 }
+
+// Even numbers in an array
+function evenNumbers(array, number) {
+  let onlyEvens = array.filter(value => value % 2 === 0)
+  return onlyEvens.slice(onlyEvens.length -number)
+}
