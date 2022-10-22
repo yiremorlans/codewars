@@ -634,3 +634,22 @@ function chunkArray(array, size) {
 }
 
 console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 5))
+
+// Create own filter function
+function arrayFilter(arr, func) {
+  for (let elem of arr) {
+    if (func(elem)) {
+      return elem
+    }
+  }
+  return undefined
+}
+
+function arrayFilter(arr, func) {
+  let filteredArray = arr.filter(func);
+  return filteredArray[0] ? filteredArray[0] : undefined;
+}
+
+function arrayFilter(arr, func) {
+  return arr.find(func)
+} // or returns undefined
