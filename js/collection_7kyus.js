@@ -653,3 +653,18 @@ function arrayFilter(arr, func) {
 function arrayFilter(arr, func) {
   return arr.find(func)
 } // or returns undefined
+
+// Reverses a string
+function reverseString(text) {
+  return [...text].reduce((acc, char) => char + acc, '')
+}
+
+// Reverses an integer
+function reverseInteger(num) {
+  let reversedNumber = parseInt(reverseString(num.toString()))
+  //parseInt() will parse up to the first non-digit character, Number() will try to convert the entire string.
+  // Number('123-') --> NaN vs parseInt('123-') --> 123
+  return (reversedNumber * Math.sign(num))
+  //(123 * -1 = -123)
+  // Math.sign() returns 1 if positve num is passed, -1 if negative
+}
