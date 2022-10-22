@@ -623,3 +623,14 @@ function evenNumbers(array, number) {
   let onlyEvens = array.filter(value => value % 2 === 0)
   return onlyEvens.slice(onlyEvens.length -number)
 }
+
+//Create a function that returns an array with array subsets of the given size
+function chunkArray(array, size) {
+	let newChunk = []
+	for (let i = 0; i < array.length; i += size) {
+		newChunk.push(array.slice(i, i + size))
+	}
+			return newChunk
+}
+
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 5))
