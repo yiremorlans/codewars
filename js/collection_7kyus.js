@@ -668,3 +668,14 @@ function reverseInteger(num) {
   //(123 * -1 = -123)
   // Math.sign() returns 1 if positve num is passed, -1 if negative
 }
+
+// Implement a recursive factorial function
+function factorial(n) {
+	if (n === 0) {
+		return 1
+	} else {
+		return n * factorial(n - 1)
+	}
+}
+
+console.log(factorial(5))
