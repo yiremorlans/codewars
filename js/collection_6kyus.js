@@ -291,6 +291,8 @@ function solve(arr) {
 	newArr = newArr.reduce((total, value) => total *= value.length, 1)
 	return newArr
 }
+
+const solve = arr => arr.reduce((a, c) => a * new Set(c).size, 1)
 // receiving a nested arr of int values, may include duplicates
 // returning an int of the amount of arrays that can be formed pulling one unique value from each sub array
 
