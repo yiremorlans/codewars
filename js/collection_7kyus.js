@@ -679,3 +679,19 @@ function factorial(n) {
 }
 
 console.log(factorial(5))
+
+// Implement bubble sort
+// [9, 2, 5, 6, 4, 3, 7, 10, 1, 8]; [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+function bubbleSort(arr){
+  for (let i=0; i<arr.length; i++){
+    for (let b=0; b<arr.length; b++){
+      if (arr[b] > arr[b+1]) {
+        let temp = arr[b]
+        arr[b] = arr[b+1]
+        arr[b+1] = temp
+      }
+    }
+  }
+  return arr
+}
