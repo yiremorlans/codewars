@@ -695,3 +695,18 @@ function bubbleSort(arr){
   }
   return arr
 }
+
+// Return the nth minimun value in an array
+
+function nthSmallest(array, num) {
+	let arrayCopy = [...array]
+	arrayCopy.sort((a, b) => b - a)
+	return arrayCopy[arrayCopy.length - num]
+}
+
+
+function nthSmallest(array, num) {
+	let arrayCopy = [...array]
+	arrayCopy.sort((a, b) => a - b)
+	return arrayCopy[num -1]
+}
