@@ -704,9 +704,4 @@ function nthSmallest(array, num) {
 	return arrayCopy[arrayCopy.length - num]
 }
 
-
-function nthSmallest(array, num) {
-	let arrayCopy = [...array]
-	arrayCopy.sort((a, b) => a - b)
-	return arrayCopy[num -1]
-}
+const nthSmallest = (array, num) => array.sort((a, b) => a -b)[num -1] 
