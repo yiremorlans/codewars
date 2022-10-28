@@ -705,3 +705,21 @@ function nthSmallest(array, num) {
 }
 
 const nthSmallest = (array, num) => array.sort((a, b) => a -b)[num -1] 
+
+// Write a function that returns a str of open and closing parenthesis if the character appears once, or duplicate amount of times
+
+function parens(str){
+  return str.toLowerCase().split('').map((value, index, arr) => arr.indexOf(value) === arr.lastIndexOf(value) ? '(' : ')')
+}
+
+function parens(str){
+
+  function charMap(str){
+
+    let cache = {}
+    for(let letter of word){
+      (!cache.hasOwnProperty(value)) ? cache[letter] = 1 : cache[letter] += 1
+    }
+    return cache
+  }
+}
