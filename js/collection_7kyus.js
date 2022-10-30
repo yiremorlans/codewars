@@ -726,3 +726,8 @@ function parens(str) {
 	}
 	return newStr
 }
+
+// Return true or false if the str provided is repeating the same character w/o any loops!
+function hasOneChar(s) {
+    return s[0].repeat(s.length) === s
+}
