@@ -731,3 +731,12 @@ function parens(str) {
 function hasOneChar(s) {
     return s[0].repeat(s.length) === s
 }
+
+// Return the factorial of n
+const factorial = n => {
+  if (n === 0) {
+    return 1
+  } else {
+    return n * factorial(n -1)
+  }
+};
