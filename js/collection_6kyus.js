@@ -316,6 +316,10 @@ function stringTransformer(str) {
 				letter.toUpperCase()).join('')
 	})
 	return newArr.join(' ')
-	//join back together by a space
-	// return newArr.join(' ')
+
+}
+// O(2n) alternative solution vs O(n^2) solution
+function transformStr(str) {
+   let arr = str.split(' ').reverse().join(' ')
+   return arr.split('').map(letter => letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()).join('')
 }
