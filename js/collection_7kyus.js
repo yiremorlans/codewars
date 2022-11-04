@@ -746,3 +746,31 @@ function last(x){
   return x.split(' ').sort((a,b) => a.charCodeAt(a.length-1) - b.charCodeAt(b.length-1))
 } 
 //also .sort((a,b) a.slice(-1) > b.slice(-1))
+
+// Write a function, makeChange, that returns an integer that represents the least number of coins that add up to an amount where the amount is always divisible by 5.
+
+
+// coin values: 5, 10, 25
+
+function makeChange(input) {
+	//input integer only positive whole number
+	//result is an integer, least number of coins to sum input
+	// assign coin values to array
+	// assign a coin counter
+	//while input > 0 iterate through coin values subtracting from input
+	let counter = 0
+
+	while (input > 0){
+		if (input >= 25) {
+			input = input - 25
+			counter ++
+		} else if (input >= 10) {
+			input = input - 10
+			counter ++
+		} else {
+			input = input - 5
+			counter ++
+		}
+	}
+	return counter
+}
