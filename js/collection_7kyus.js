@@ -745,7 +745,7 @@ const factorial = n => {
 function last(x){
   return x.split(' ').sort((a,b) => a.charCodeAt(a.length-1) - b.charCodeAt(b.length-1))
 } 
-//also .sort((a,b) => a[a.length-1].localeCompare(b[b.length-1
+//also .sort((a,b) => a[a.length-1].localeCompare(b[b.length-1)
 
 // Write a function, makeChange, that returns an integer that represents the least number of coins that add up to an amount where the amount is always divisible by 5.
 
