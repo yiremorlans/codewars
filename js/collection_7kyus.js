@@ -785,9 +785,8 @@ function findDeletedNumber(sortArr, mixArr) {
 
 
 function findDeletedNumber(sortArr, mixArr) {
-	if (sortArr.length === 0) return 0;
+	if (sortArr.length === 0 || sortArr.length === mixArr.length) return 0;
 	let mixSet = new Set(mixArr)
 	let newArr = sortArr.filter(value => !mixSet.has(value))
 	return newArr.length === 0 ? 0 : newArr[0]
 } // O(n) creates a new Set which uses more memory, but checking value of mixSet is O(1) instead of O(n) eliminating nested loop
-
