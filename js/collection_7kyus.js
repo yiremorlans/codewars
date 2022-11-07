@@ -745,7 +745,7 @@ const factorial = n => {
 function last(x){
   return x.split(' ').sort((a,b) => a.charCodeAt(a.length-1) - b.charCodeAt(b.length-1))
 } 
-//also .sort((a,b) => a[a.length-1].localeCompare(b[b.length-1]))
+//also .sort((a,b) => a[a.length-1].localeCompare(b[b.length-1
 
 // Write a function, makeChange, that returns an integer that represents the least number of coins that add up to an amount where the amount is always divisible by 5.
 
@@ -775,4 +775,19 @@ function makeChange(input) {
 	return counter
 }
 
+// An ordered sequence of numbers from 1 to N is given. One number might have deleted from it, then the remaining numbers were mixed. Find the number that was deleted.
+
+function findDeletedNumber(sortArr, mixArr) {
+	if (sortArr.length === 0) return 0;
+	let newArr = sortArr.filter(value => !mixArr.includes(value))
+	return newArr.length === 0 ? 0 : newArr[0]
+} // O(n^2) includes is linear inside of a looping method like filter
+
+
+function findDeletedNumber(sortArr, mixArr) {
+	if (sortArr.length === 0) return 0;
+	let mixSet = new Set(mixArr)
+	let newArr = sortArr.filter(value => !mixSet.has(value))
+	return newArr.length === 0 ? 0 : newArr[0]
+} // O(n) creates a new Set which uses more memory, but checking value of mixSet is O(1) instead of O(n) eliminating nested loop
 
