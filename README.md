@@ -4,7 +4,7 @@ A repository filled with codewars challenges (kata), sorted by kyu. Completed ov
 
 ## How It's Made:
 
-**Tech used:** <img src="https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript"/><img src="https://img.shields.io/static/v1?label=|&message=TYPESCRIPT&color=3178C6&style=plastic&logo=typescript"/>
+**Tech used:** <img src="https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript"/> <img src="https://img.shields.io/static/v1?label=|&message=TYPESCRIPT&color=3178C6&style=plastic&logo=typescript"/>
 
 Nothing like warming up the neurons with a codewars challenge before taking on the day!
 
