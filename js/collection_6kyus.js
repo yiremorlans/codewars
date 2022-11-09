@@ -323,3 +323,19 @@ function transformStr(str) {
    let arr = str.split(' ').reverse().join(' ')
    return arr.split('').map(letter => letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()).join('')
 }
+// Create a function that takes two arrays and returns a new array w/ values from array b absent from the array a.
+// base case is O(1) but solution goes into quadratic time, making it less ideal for large inputs
+function arrayDiff(arrA, arrB){
+	if (arrA.length === 0) return []
+	if (arrB.length === 0) return arrA
+
+	return arrA.filter(value => !arrB.includes(value))
+}
+// base case remains O(1) but w/ set there is memory used to make it a linear solution 
+function arrayDiff(arrA, arrB){
+	if (arrA.length === 0) return []
+	if (arrB.length === 0) return arrA
+
+	const newArrB = new Set(arrB)
+	return arrA.filter(value => !newArrB.has(value))
+}
