@@ -333,8 +333,7 @@ function arrayDiff(arrA, arrB){
 }
 // base case remains O(1) but w/ set there is memory used to make it a linear solution 
 function arrayDiff(arrA, arrB){
-	if (arrA.length === 0) return []
-	if (arrB.length === 0) return arrA
+	if (arrA.length === 0 || arrB.length === 0) return arrA
 
 	const newArrB = new Set(arrB)
 	return arrA.filter(value => !newArrB.has(value))
