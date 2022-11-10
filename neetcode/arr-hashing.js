@@ -34,3 +34,14 @@ var twoSum = function (nums, target) {
     }
 };
 
+// Create a function that returns true/false whether str is a palindrome after converting to lowercase and removing all non-alphanumeric characters.
+var isPalindrome = function(s) {
+    if (s.length === 0){
+        return true
+    }
+    let newArr = s.toLowerCase().split('')
+    
+    newArr = newArr.filter(value => 'abcdefghijklmnopqrstuvwxyz0123456789'.includes(value))
+    return newArr.join('') === newArr.reverse().join('')
+   
+};
