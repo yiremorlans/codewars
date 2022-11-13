@@ -10,3 +10,21 @@ var runningSum = function(nums) {
     return resultArr
     
 };
+
+// Find the pivotIndex in an array
+var pivotIndex = function(nums) {
+    if (nums.length === 0) return -1;
+    if (nums.legnth === 1) return 0;
+
+    let totalSum = nums.reduce((total, value) => total + value, 0)
+    let leftSum = 0
+    
+    for (let i=0; i< nums.length; i++){
+        
+        if (leftSum === totalSum - leftSum - nums[i]) {
+            return i
+        }
+        leftSum += nums[i]
+    }
+    return -1
+};
