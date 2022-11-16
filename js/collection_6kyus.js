@@ -338,3 +338,16 @@ function arrayDiff(arrA, arrB){
 	const newArrB = new Set(arrB)
 	return arrA.filter(value => !newArrB.has(value))
 }
+
+// Create a function that returns a new arr where only the odd integers are sorted, even left in place
+function sortArray(array) {
+  let arrCopy = array.slice()
+
+  let oddNums = arrCopy.filter(value => value % 2).sort((a,b)=> a-b)
+  return array.map(value => value % 2 ? oddNums.shift() : value)
+}
+// .pop instead of shift makes the return statement O(n) instead of O(n^2)
+function sortArray(array) {
+  let oddNums = array.filter(value => value % 2).sort((a,b)=> b-a)
+  return array.map(value => value % 2 ? oddNums.pop() : value)
+}
