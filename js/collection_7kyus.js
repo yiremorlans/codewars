@@ -797,3 +797,13 @@ function findDeletedNumber(sortArr, mixArr) {
 	return sortArr.filter(value => !mixSet.has(value))[0]
 }// O(n) creates a new Set which uses more memory, but checking value of mixSet is O(1) instead of O(n) eliminating nested loop
 
+// Create a function that takes an average length from an arr and returns a new arr w/ each values length as the average
+function averageLength(arr) { 
+  let arrAvg = Math.round(arr.reduce((total, value) => total + value.length, 0) / arr.length)
+  return arr.map(value => value.slice(0,1).repeat(arrAvg))
+}
+
+function averageLength(arr) { 
+  let arrAvg = Math.round(arr.reduce((total, value) => total + value.length, 0) / arr.length)
+  return arr.map(value => value[0].repeat(arrAvg))
+}
