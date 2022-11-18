@@ -28,3 +28,38 @@ var pivotIndex = function(nums) {
     }
     return -1
 };
+
+// Are the strings isomorphic?
+var isIsomorphic = function(s, t) {
+    if (s.length!=t.length) return false;
+    for (let i=0;i<s.length;i++){
+        if (t[s.indexOf(s[i])]!==t[i] || s[t.indexOf(t[i])]!=s[i]) return false;
+    }
+    return true;
+};
+// quadratic solution using hashmap to map letters together
+function isomorphic(str1, str2) {
+    if (str1.length !== str2.length) {
+        return false;
+    }
+    var map = {};
+    for(var i = 0; i < str1.length; i++) {
+        var a = str1[i]; 
+        var b = str2[i];
+        if (typeof map[a] === "undefined") {
+            map[a] = b;
+
+        // check for error in first tuple ("ABB", "XYZ")
+        } else if (map[a] !== b) {
+            return false;
+        }
+
+        // check for error in second tuple ("ABC", "XYY")
+        for (let key in map) {
+            if (key !== a && b === map[key]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
