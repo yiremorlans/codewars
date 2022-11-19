@@ -807,3 +807,20 @@ function averageLength(arr) {
   let arrAvg = Math.round(arr.reduce((total, value) => total + value.length, 0) / arr.length)
   return arr.map(value => value[0].repeat(arrAvg))
 }
+
+// Create a function that removes consecutive duplicates
+const removeConsecutiveDuplicates = s => {
+  let duplicateStrArr = s.split(' ')
+  let newStr = ''
+      for (let i =0; i< duplicateStrArr.length; i++){
+        if (duplicateStrArr[i] !== duplicateStrArr[i+1]) {
+          newStr += duplicateStrArr[i] + ' '
+        }
+      }
+  return newStr.trimEnd()
+}
+
+// using filter method
+function removeConsecutiveDuplicates(str) {
+  return str.split(' ').filter((value, index, arr) => value !== arr[index+1]).join(' ')
+}
