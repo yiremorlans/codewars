@@ -351,3 +351,18 @@ function sortArray(array) {
   let oddNums = array.filter(value => value % 2).sort((a,b)=> b-a)
   return array.map(value => value % 2 ? oddNums.pop() : value)
 }
+
+// Break the camelCase string into a new str with spaces between.
+function solution(string) {
+  
+  let newStr = ''
+  
+  for (let i=0; i< string.length; i++){
+    if (string[i] === string[i].toUpperCase()) {
+      newStr += `,${string[i]}` + string.slice(i, string[i] === string[i].toUpperCase())
+    } else {
+      newStr += string[i]
+    }
+  }
+ return newStr.split(',').join(' ')
+}
