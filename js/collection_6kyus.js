@@ -366,3 +366,35 @@ function solution(string) {
   }
  return newStr.split(',').join(' ')
 }
+
+// Create a function that returns the highest scoring word in a string if letters were points from their position in the alphabet 
+function high(x){
+  
+  const hashmap = (word) => {
+    const theHash = {}
+    
+    for (let i=0; i< word.length; i++){
+      
+      let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+      
+      if (!theHash[word[i]]) {
+        theHash[word[i]] = alphabet.indexOf(word[i]) + 1
+      } else {
+        theHash[word[i]] += alphabet.indexOf(word[i]) + 1 
+      }
+    }
+    return theHash
+  }
+  
+  let strArr = x.split(' ')
+  let scoresArr = []
+  
+  for (let i=0; i< strArr.length; i++){
+    let mapped = hashmap(strArr[i])
+    
+    let score = Object.values(mapped).reduce((total, value) => total + value, 0)
+    scoresArr.push(score)
+
+  }
+  return strArr[scoresArr.indexOf(Math.max(...scoresArr))]
+}
