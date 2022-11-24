@@ -1,9 +1,9 @@
 # Codewars Collections: <a target="_blank" href="https://www.codewars.com/users/XenaaMorph%20/completed_solutions" >Visit Here</a>
 
+<img src="https://www.codewars.com/users/XenaaMorph%20/badges/large"/>
+
 ![alt tag](https://github.com/yiremorlans/codewars/blob/main/codewars_screensho.png)
 A repository filled with codewars challenges (kata), sorted by kyu. Completed over 1000+ challenges and consistently push 5 solutions a week.
-<br>
-<img src="https://www.codewars.com/users/XenaaMorph%20/badges/large"/>
 
 ## How It's Made:
 
