@@ -398,3 +398,21 @@ function high(x){
   }
   return strArr[scoresArr.indexOf(Math.max(...scoresArr))]
 }
+
+// Write a function that detects if a string is a pangram(contains every letter in the alphabet at least once)
+function isPangram(string){
+  
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  
+  let sanitizedString = string.toLowerCase().split('').filter(value => alphabet.includes(value)).join('')
+  
+  const hashMap = {}
+  
+  for(let i=0; i< sanitizedString.length; i++){
+    if (!hashMap.hasOwnProperty(sanitizedString[i])) {
+      hashMap[sanitizedString[i]] = 1
+    }
+
+  }
+  return Object.keys(hashMap).length === 26
+}
