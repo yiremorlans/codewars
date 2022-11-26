@@ -416,3 +416,11 @@ function isPangram(string){
   }
   return Object.keys(hashMap).length === 26
 }
+
+// alternative solution using every
+function isPangram(string){
+  string = string.toLowerCase();
+  return "abcdefghijklmnopqrstuvwxyz".split("").every(function(x){
+    return string.indexOf(x) !== -1;
+  });
+}
