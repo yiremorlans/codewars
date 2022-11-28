@@ -424,3 +424,16 @@ function isPangram(string){
     return string.indexOf(x) !== -1;
   });
 }
+
+// Write a function that returns if value is a narcissistic number (each digit^number.length is equal to original value)
+function narcissistic(value) {
+  
+  let accum = 0
+  let strInt = value.toString()
+  
+  for (let i=0; i<strInt.length; i++){
+    let newVal = +strInt[i]
+    accum += Math.pow(newVal, strInt.length)
+  }
+  return accum === value
+}
