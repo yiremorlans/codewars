@@ -450,3 +450,10 @@ function dup(s) {
   }
   return resultArr
 }; // O(n^2) solution
+
+// alternative solution to string array duplicates 
+function dup(s) {
+  return s.map(value => value
+               .split('')
+               .filter((currentVal, index, arr) => currentVal !== arr[index +1]).join(''))
+};
