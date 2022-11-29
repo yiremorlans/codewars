@@ -437,3 +437,16 @@ function narcissistic(value) {
   }
   return accum === value
 }
+
+// Write a func that returns a new array of string without consecutive duplicates 
+function dup(s) {
+  let resultArr = []
+  
+  for (let i=0; i< s.length; i++){
+    
+    let newStr = ''
+    s[i].split('').forEach(value => newStr[newStr.length -1] === value ? value : newStr += value)
+    resultArr.push(newStr)
+  }
+  return resultArr
+}; // O(n^2) solution
