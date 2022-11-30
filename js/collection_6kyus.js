@@ -457,3 +457,21 @@ function dup(s) {
                .split('')
                .filter((currentVal, index, arr) => currentVal !== arr[index +1]).join(''))
 };
+
+// Write a function that returns a new string with words ordered by the number value inside the word.
+function order(words){
+  if (words.length === 0) return ''
+  
+  let wordsArr = words.split(' ')
+  
+  let resultStr = []
+  
+  for (let n=1; n<=9; n++){
+    for (let i=0; i< wordsArr.length; i++){
+      if (wordsArr[i].includes(n)) {
+        resultStr.push(wordsArr[i])
+      }
+    }
+  }
+  return resultStr.join(' ')
+}
