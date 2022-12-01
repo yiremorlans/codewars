@@ -824,3 +824,30 @@ const removeConsecutiveDuplicates = s => {
 function removeConsecutiveDuplicates(str) {
   return str.split(' ').filter((value, index, arr) => value !== arr[index+1]).join(' ')
 }
+
+// Write a function that returns the defined index of the absent vowel in the string
+function absentVowel(x){
+  const vowels = 'aeiou'
+  let hashmap = {
+    'a': 0,
+    'e': 0,
+    'i': 0,
+    'o': 0,
+    'u': 0
+  }
+  
+  for (let letter of x){
+    if (hashmap.hasOwnProperty(letter)) {
+      hashmap[letter] ++
+    }
+  }
+   
+   for (let [key, value] of Object.entries(hashmap)){
+     if (value === 0) {
+       return vowels.indexOf(key)
+     }
+   }
+   
+ }
+ 
+//
