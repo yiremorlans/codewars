@@ -850,4 +850,16 @@ function absentVowel(x){
    
  }
  
-//
+// Write a function that will reverse a string without .reverse() method
+function reversal(str) {
+	return str.split('').reduce((whole, letter) => letter + whole, '')
+}
+
+// use for of loop, faster solution without split
+function reversal(str) {
+	let reverseStr = ''
+	for (let letter of str) {
+		reverseStr = letter + reverseStr
+	}
+	return reverseStr
+}
