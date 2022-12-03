@@ -475,3 +475,17 @@ function order(words){
   }
   return resultStr.join(' ')
 }
+
+// Write a function that returns true/false if arr2 contains squared values from arr1
+function comp(array1, array2){
+  if (array1 === null || array2 === null) return false
+  
+  for (let i=0; i< array1.length; i++){
+    let square = array1[i] * array1[i]
+    if (array2.includes(square)) {
+      array2[array2.indexOf(square)] = 0
+    }
+    
+  }
+  return array2.reduce((total, value)=> total + value, 0) === 0 ? true : false
+}
