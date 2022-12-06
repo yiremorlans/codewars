@@ -75,3 +75,14 @@ const isSubsequence = (s, t) => {
     }
     return sPointer === s.length
 }
+
+// Create a function that returns the amount of jewels present in the collection of stones. Case sensitive
+var numJewelsInStones = function(jewels, stones) {
+    let totalJewels = 0
+    for (let i=0; i< stones.length; i++){
+        if (jewels.includes(stones[i])) {
+            totalJewels++
+        }
+    }
+    return totalJewels
+};
