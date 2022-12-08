@@ -86,3 +86,46 @@ var numJewelsInStones = function(jewels, stones) {
     }
     return totalJewels
 };
+
+/*
+Given a string of characters, return the character that appears the most often.
+
+describe("Max Character", () => {
+ it("Should return max character", () => {
+  assert.equal(max("Hello World!"), "l");
+ });
+});
+
+No String or Array Methods (well brute force it first, but then no methods)! */
+function maxCharacter(string){
+
+    const charMap = (string) => {
+        let obj = {}
+
+        for (const letter of string) {
+            obj[letter] ? obj[letter]++ : obj[letter] = 1
+        }
+        return obj
+    }
+
+    if (string.length === 0) {
+        return ''
+    } else {
+
+        string = string.toLowerCase().split(' ').join('')
+        const hashmap = charMap(string)
+
+        let maxValue = 0
+        let maxChar;
+
+        for (let [key, value] of Object.entries(hashmap)){
+            if (value > maxValue){
+                maxValue = value
+                maxChar = key
+            }
+        }
+        return maxChar
+    }
+}
+
+console.log(maxCharacter('Happy Birthday to Maria ! '))
