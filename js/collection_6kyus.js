@@ -489,3 +489,28 @@ function comp(array1, array2){
   }
   return array2.reduce((total, value)=> total + value, 0) === 0 ? true : false
 }
+
+// Write a function that returns the unique item in an array of numbers
+function findUniq(arr) {
+  
+  const hashmap = (arr) => {
+    let obj = {}
+    for (let i=0; i< arr.length; i++){
+
+      if (obj.hasOwnProperty(arr[i])) {
+        obj[arr[i]] = false
+      } else {
+        obj[arr[i]] = true
+      }
+    }
+    return obj
+  }
+  
+  let uniqueValueObject = hashmap(arr) 
+  
+  for (let uniqueVal in uniqueValueObject){
+    if (uniqueValueObject[uniqueVal] === true){
+      return +uniqueVal
+    }
+  }
+}
