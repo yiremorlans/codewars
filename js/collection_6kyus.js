@@ -514,3 +514,21 @@ function findUniq(arr) {
     }
   }
 }
+// Write a function that finds the index in which the leftside of the array is equal to the rightside of the array
+function findEvenIndex(arr){
+  
+  if (arr.length < 1) return -1
+  
+  const totalSumOfArr = arr.reduce((total, value) => total + value, 0)
+  
+  let leftSum = 0
+  
+  for (let i=0; i< arr.length; i++){
+    if (leftSum === totalSumOfArr - leftSum - arr[i]){
+      return i
+    } else {
+      leftSum += arr[i]
+    }
+  }
+  return -1
+}
