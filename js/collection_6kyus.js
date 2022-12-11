@@ -532,3 +532,11 @@ function findEvenIndex(arr){
   }
   return -1
 }
+
+// Write a function to decode the morsecode to text
+decodeMorse = function(morseCode){
+  let morseArr = morseCode.trim().split(' ')
+  morseArr = morseArr.map(value => MORSE_CODE[value]).map(value => value === undefined ? value = ' ' : value)
+  morseArr = morseArr.map((value, index, arr)=> (value === arr[index+1] && value === ' ') ? '' : value)
+  return morseArr.join('')
+}
