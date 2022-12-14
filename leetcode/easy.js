@@ -238,3 +238,24 @@ console.log(ransomNote("sit ad est sint", magazine), true);
 console.log(ransomNote("sit ad est love", magazine), false);
 console.log(ransomNote("sit ad est sint in in", magazine), true);
 console.log(ransomNote("sit ad est sint in in in in", magazine), false);
+
+/*Given an array of numbers, return all pairs that add up to a given sum. The numbers can be used more than once. */
+
+const twoSum = (arr, sum) => {
+  const arrHash = {};
+  let pairs = [];
+
+  for (const num of arr) {
+    if (sum - num in arrHash) {
+      pairs.push([sum - num, num]);
+    } else {
+      arrHash[num] = 1;
+    }
+  }
+  return pairs;
+};
+
+console.log(twoSum([1, 2, 2, 3, 4], 4), [
+  [2, 2],
+  [3, 1],
+]);
