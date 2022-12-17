@@ -277,6 +277,24 @@ const productOfEach = (array) => {
   return productArr;
 };
 
+// Product of nums with constraints defined by leetcode. Must be O(n) and not use division
+function productOfEach(nums) {
+  let product = [];
+  let leftSide = 1;
+  let rightSide = 1;
+
+  for (let i = 0; i < nums.length; i++) {
+    product[i] = leftSide;
+    leftSide = leftSide * nums[i];
+  }
+
+  for (let i = nums.length - 1; i >= 0; i--) {
+    product[i] = rightSide * product[i];
+    rightSide = rightSide * nums[i];
+  }
+  return product;
+}
+
 console.log(productOfEach([1, 2, 3, 4, 5]), [120, 60, 40, 30, 24]);
 
 console.log(productOfEach([3, 2, 1]), [2, 3, 6]);
