@@ -625,22 +625,21 @@ function tribonacci(signature, n) {
   return copyArr;
 }
 
-//Write a function that maps through the current data and returns a new an array of objects with only two properties: fullName and birthday. 
-//Each result in your array should look like this when you're done: 
+//Write a function that maps through the current data and returns a new an array of objects with only two properties: fullName and birthday.
+//Each result in your array should look like this when you're done:
 
-{
+/*{
     fullName: "Levent Busser", 
     birthday: "Fri Aug 20 1971"
-}
-
+}*/
 
 function evilData(users) {
-  return users.map(user => {
-		let newDate = new Date(user.dob.date)
-		
+  return users.map((user) => {
+    let newDate = new Date(user.dob.date);
+
     return {
       fullName: `${user.name.first} ${user.name.last}`,
-      birthday: newDate.toDateString()
-    }
+      birthday: newDate.toDateString(),
+    };
   });
 }
