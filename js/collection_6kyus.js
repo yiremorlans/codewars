@@ -660,3 +660,13 @@ function fibonacci(max) {
     .filter((value) => value % 2 === 0 && value < max)
     .reduce((total, value) => total + value, 0);
 }
+
+// Codewars fibonacci return the nth number.
+function nthFibo(n) {
+  let fibArr = [0, 1];
+
+  for (let i = 2; i <= n; i++) {
+    fibArr[i] = fibArr[i - 1] + fibArr[i - 2];
+  }
+  return fibArr[n - 1];
+}
