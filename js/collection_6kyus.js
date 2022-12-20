@@ -643,3 +643,20 @@ function evilData(users) {
     };
   });
 }
+
+// Write a function that returns the sum of all even numbers in the fibonacci sequence that are less than the given n.
+function fibonacci(max) {
+  let fibArr = [0, 1];
+
+  for (let i = 2; i < max; i++) {
+    if (Math.max(...fibArr) > max) {
+      break;
+    } else {
+      fibArr[i] = fibArr[i - 1] + fibArr[i - 2];
+    }
+  }
+
+  return fibArr
+    .filter((value) => value % 2 === 0 && value < max)
+    .reduce((total, value) => total + value, 0);
+}
