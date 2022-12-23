@@ -7,10 +7,10 @@ A repository filled with codewars challenges (kata), sorted by kyu. Completed ov
 
 ## How It's Made:
 
-**Tech used:** <img src="https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript"/>
-<img src="https://img.shields.io/static/v1?label=|&message=TYPESCRIPT&color=3178C6&style=plastic&logo=typescript"/>
-<img src="https://img.shields.io/static/v1?label=|&message=JAVA&color=red&style=plastic&logo=java"/>
-<img src="https://img.shields.io/static/v1?label=|&message=SQL&color=green&style=plastic&logo=sql"/>
+**Tech used:** <img src="https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=flat&logo=javascript"/>
+<img src="https://img.shields.io/static/v1?label=|&message=TYPESCRIPT&color=3178C6&style=flat&logo=typescript"/>
+<img src="https://img.shields.io/static/v1?label=|&message=JAVA&color=red&style=flat&logo=java"/>
+<img src="https://img.shields.io/static/v1?label=|&message=SQL&color=#4169E1&style=flat&logo=microsoftsqlserver"/>
 
 Nothing like warming up the neurons with a codewars challenge before taking on the day!
 
