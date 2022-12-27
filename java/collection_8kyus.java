@@ -13,3 +13,10 @@ public class EvenOrOdd {
         
     }
 }
+
+// Write a function that returns the opposite number of n
+public class Kata {
+        public static int opposite(int number) {
+          return -number;
+        }
+    }
