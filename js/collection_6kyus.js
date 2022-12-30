@@ -684,3 +684,20 @@ function findMissingLetter(array) {
     }
   }
 }
+
+// Delete occurences of an element greater than n from an array, maintaining the order of the remaining elements.
+function deleteNth(arr, n) {
+  let newArr = [];
+  let hashmap = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    if (newArr.indexOf(arr[i] < 0) && !hashmap[arr[i]]) {
+      newArr.push(arr[i]);
+      hashmap[arr[i]] = 1;
+    } else {
+      hashmap[arr[i]] += 1;
+      hashmap[arr[i]] <= n ? newArr.push(arr[i]) : arr[i];
+    }
+  }
+  return newArr;
+}
