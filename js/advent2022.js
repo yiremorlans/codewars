@@ -52,12 +52,13 @@ function rockPaperScissors(input) {
   //     .map((value) => value.split(','));
   
   //   let shared = [];
+    
   //   items.map((value) => {
   //     let ruck1 = value[0].split('');
   //     let ruck2 = value[1].split('');
   //     shared.push(ruck1.find((letter) => ruck2.includes(letter)));
   //   });
-  
+  //   shared = shared.filter(value => value !== undefined)
   //   console.log(shared);
   //   return shared.reduce((total, value) => total + priority.indexOf(value), 0);
   // }
