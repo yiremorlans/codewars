@@ -929,3 +929,16 @@ const fibonacci = (n) => {
     return fibonacci(n - 1) + fibonacci(n - 2);
   }
 };
+
+// Find the greatest common divisor using recursion
+function mygcd(x, y) {
+  return y == 0 ? x : mygcd(y, x % y);
+  // x: 30 y: 12 argument: 12, 6
+  // x: 6  y: 6  argument: 6, 0
+  // satisfies y == 0
+
+  // x: 8  y: 9 argument: 9, 8
+  // x: 9  y: 8 argument: 8, 1
+  // x: 8  y: 1 argument: 1, 0
+  // satisfies y == 0
+}
