@@ -942,3 +942,20 @@ function mygcd(x, y) {
   // x: 8  y: 1 argument: 1, 0
   // satisfies y == 0
 }
+
+// Implement a JS queue using js prototype methods.
+var Queue = function () {
+  this.items = [];
+};
+
+Queue.prototype.enqueue = function (item) {
+  return this.items.push(item);
+};
+
+Queue.prototype.dequeue = function () {
+  return this.items.shift();
+};
+
+Queue.prototype.size = function () {
+  return this.items.length;
+};
