@@ -670,3 +670,17 @@ function nthFibo(n) {
   }
   return fibArr[n - 1];
 }
+
+// Find and return the sequential letter missing from the alphabet array
+function findMissingLetter(array) {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+  for (let i = 0; i < array.length; i++) {
+    let currentIndex = alphabet.indexOf(array[i].toLowerCase());
+    if (alphabet[currentIndex + 1] !== array[i + 1].toLowerCase()) {
+      return array[i].toUpperCase() === array[i]
+        ? alphabet[currentIndex + 1].toUpperCase()
+        : alphabet[currentIndex + 1];
+    }
+  }
+}
