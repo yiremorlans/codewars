@@ -719,3 +719,26 @@ class Stack {
     return this.size === 0;
   }
 }
+
+// Implement a queue as a class
+class Queue {
+  constructor() {
+    this.storage = {};
+    this.head = 0;
+    this.tail = 0;
+  }
+  // add item to queue
+  enqueue(item) {
+    this.storage[this.tail] = item;
+    this.tail++;
+    console.log(`Added ${item} to the queue.`);
+  }
+  // remove item from front of queue
+  dequeue() {
+    let removed = this.storage[this.head];
+    delete this.storage[this.head];
+    this.head++;
+    console.log(`Removed ${removed} from queue.`);
+    return removed;
+  }
+}
