@@ -742,3 +742,30 @@ class Queue {
     return removed;
   }
 }
+
+// Implement a Magic class as a stack for adding and casting spells
+class Magic {
+  constructor() {
+    this.spells = [];
+  }
+
+  spellStack(card) {
+    if (card === undefined) {
+      while (this.spells.length > 0) {
+        let removed = this.spells[this.spells.length - 1];
+        this.spells.pop();
+        return removed;
+      }
+    }
+
+    if (card.type == "instant") {
+      this.spells.push(card);
+      return this.spells.length;
+    } else if (card.type == "sorcery" && this.spells.length === 0) {
+      this.spells.push(card);
+      return this.spells.length;
+    } else {
+      throw new Error("SpellStack is not empty");
+    }
+  }
+}
