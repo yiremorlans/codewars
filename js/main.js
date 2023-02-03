@@ -769,3 +769,16 @@ class Magic {
     }
   }
 }
+// less verbose implementation as Magic object
+function Magic() {
+  var spells = [];
+  this.spellStack = function (spell) {
+    if (spell) {
+      if (spell.type == "sorcery" && spells.length) throw "Stack ain't empty !";
+      return spells.push(spell);
+    } else {
+      if (spells.length < 1) throw "Stack's empty !";
+      return spells.pop();
+    }
+  };
+}
