@@ -8,3 +8,7 @@ where CountryCode = 'USA' AND Population > 100000;
 **/
 select city.name from City
 where CountryCode = 'USA' AND Population > 120000;
+/**
+* Query all columns for all cities in the CITY table
+**/
+select * from city;
