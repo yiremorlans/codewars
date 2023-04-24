@@ -12,3 +12,8 @@ where CountryCode = 'USA' AND Population > 120000;
 * Query all columns for all cities in the CITY table
 **/
 select * from city;
+/**
+* Query all columns for a city in the CITY table with the ID 1661
+**/
+select * from City
+where ID = 1661;
