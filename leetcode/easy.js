@@ -315,3 +315,22 @@ var once = function (fn) {
     }
   };
 };
+
+/**
+ * Build an array from permutation
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var buildArray = function (nums) {
+  // receiving an array of integers
+  // returning a new permutation array of integers where nums[i](value) is the index of nums
+  // iterate through nums and assign new index based on nums[i]
+  // [0, 2,1,5,3,4] -> nums[0], nums[2], nums[1], nums[5], nums[3], nums[4]
+  // [0, 1, 2, 4, 5, 3]
+  let permutationArray = [];
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i];
+    permutationArray.push(nums[value]);
+  }
+  return permutationArray;
+};
