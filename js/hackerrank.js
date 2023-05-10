@@ -28,3 +28,25 @@ function plusMinus(arr) {
   console.log((negativeNums / arrLength).toFixed(6));
   console.log((zeroNums / arrLength).toFixed(6));
 }
+
+/**
+ *   Return the second largest number in the array.
+ *   @param {Number[]} nums - An array of numbers.
+ *   @return {Number} The second largest number in the array.
+ **/
+function getSecondLargest(nums) {
+  // receiving an array of numbers
+  // returning the second largest in the array
+  // [2,3,6,6,5] -- > sort [2,3,5,6,6]
+  // find the max value
+  // remove all instances of the max value
+  // sort the array and the largest value left would be the second largest
+  const largestValue = Math.max(...nums);
+  let newArr = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (largestValue !== nums[i]) {
+      newArr.push(nums[i]);
+    }
+  }
+  return Math.max(...newArr);
+}
