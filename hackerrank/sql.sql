@@ -22,3 +22,8 @@ where ID = 1661;
 **/
 select * from City
 where CountryCode = 'JPN';
+/**
+* Query the names of all Japanese cities in the CITY table.
+**/
+select city.name from City
+where CountryCode = 'JPN';
