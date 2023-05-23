@@ -298,3 +298,20 @@ function productOfEach(nums) {
 console.log(productOfEach([1, 2, 3, 4, 5]), [120, 60, 40, 30, 24]);
 
 console.log(productOfEach([3, 2, 1]), [2, 3, 6]);
+
+// Allow one function call: Given a function fn, return a new function that is identical to the original function except that it ensures fn is called at most once.
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
+var once = function (fn) {
+  let called = false;
+  return function (...args) {
+    if (called) {
+      return;
+    } else {
+      called = true;
+      return fn(...args);
+    }
+  };
+};
