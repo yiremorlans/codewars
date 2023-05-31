@@ -27,3 +27,12 @@ where CountryCode = 'JPN';
 **/
 select city.name from City
 where CountryCode = 'JPN';
+/**
+* Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer.
+**/
+select city from station
+where ID % 2 = 0
+group by city; 
+/** OR **/
+select distinct city from station
+where ID % 2 = 0;
