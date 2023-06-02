@@ -50,3 +50,34 @@ function getSecondLargest(nums) {
   }
   return Math.max(...newArr);
 }
+
+/**
+ * Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+ */
+function miniMaxSum(arr) {
+  // receiving an array of integers--might not be sorted
+  // returning a string type of two values the min sum of 4 elements and the max sum of 4 elements
+  // sort the arr from min to max
+  // iterate through each index
+  // two vars to store my counter for min and max
+  // if the i is 0 add number to min counter
+  // if the i is length - 1 add number to max counter
+  // else add each value to both min and max counter
+  let arrCopy = arr.slice();
+  arrCopy = arrCopy.sort((a, b) => a - b);
+  let minSum = 0; //10,
+  let maxSum = 0; //14,
+  // [1,2,3,4,5]
+
+  for (let i = 0; i < arrCopy.length; i++) {
+    if (i === 0) {
+      minSum += arrCopy[i];
+    } else if (i === arrCopy.length - 1) {
+      maxSum += arrCopy[i];
+    } else {
+      minSum += arrCopy[i];
+      maxSum += arrCopy[i];
+    }
+  }
+  console.log(`${minSum} ${maxSum}`);
+}
