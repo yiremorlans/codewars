@@ -53,3 +53,7 @@ order by length(CITY) desc, CITY limit 1;
 select city from station
 where city like 'A%' OR city like 'E%' OR city like 'I%' or city like 'O%' or city like 'U%'
 group by city;
+/** OR END OF CITY NAMES **/
+select distinct city from station
+where city regexp '[aeiou]$';
+
