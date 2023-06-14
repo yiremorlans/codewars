@@ -56,4 +56,8 @@ group by city;
 /** OR END OF CITY NAMES **/
 select distinct city from station
 where city regexp '[aeiou]$';
-
+/** 
+* Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. No duplicate results.
+*/
+select distinct city from station
+where city regexp '^[AEIOU]' AND city regexp '[aeiou]$';
