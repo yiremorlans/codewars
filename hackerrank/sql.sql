@@ -61,3 +61,9 @@ where city regexp '[aeiou]$';
 */
 select distinct city from station
 where city regexp '^[AEIOU]' AND city regexp '[aeiou]$';
+/**
+* Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+*/
+select city from station
+where NOT city regexp '^[AEIOU]'
+group by city;
