@@ -101,3 +101,12 @@ FROM Country
 LEFT JOIN City 
 ON city.countrycode = country.code
 WHERE country.continent = 'ASIA';
+/**
+* Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+**/
+select city.name
+from City
+INNER JOIN Country
+ON city.countrycode = country.code
+where country.continent = 'Africa';
