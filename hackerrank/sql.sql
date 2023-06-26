@@ -110,3 +110,11 @@ from City
 INNER JOIN Country
 ON city.countrycode = country.code
 where country.continent = 'Africa';
+/**
+* Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+**/
+select country.continent, FlOOR(AVG(city.population))
+from Country
+INNER JOIN City ON city.countrycode = country.code
+group by country.continent;
