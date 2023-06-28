@@ -123,3 +123,8 @@ group by country.continent;
 **/
 select facid, name, membercost, monthlymaintenance from cd.facilities
 where membercost > 0 AND (membercost < monthlymaintenance/50);
+/**
+* Produce a list of all facilities whose name includes 'Tennis'
+**/
+select * from cd.facilities
+where name like '%Tennis%';
