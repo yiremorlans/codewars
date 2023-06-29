@@ -128,3 +128,16 @@ where membercost > 0 AND (membercost < monthlymaintenance/50);
 **/
 select * from cd.facilities
 where name like '%Tennis%';
+/**
+* Retrieve all the fields for facilities with ID 1 and 5 w/o the OR operator
+**/
+select * from cd.facilities
+where facid = 1
+UNION
+select * from cd.facilities
+where facid = 5;
+/**
+* IDEALLY YOU SHOULD USE THE IN OPERATOR
+**/
+select * from cd.facilities
+where facid in (1,5);
