@@ -164,3 +164,23 @@ select distinct surname
     from cd.members
 order by surname
 limit 10;
+/**
+* Combine all the surnames and facilities names into a single list.
+**/
+select surname from cd.members
+UNION
+select name from cd.facilities;
+/**
+* You'd like to get the signup date of your last member. How can you retrieve this information?
+**/
+select joindate as latest from cd.members
+order by joindate desc
+limit 1;
+
+/**
+* Report the first name, last name, city, and state of each person in the Person table. If the address of a personId is not present in the Address table, report null instead.
+**/
+select Person.firstName, Person.lastName, Address.city, Address.state
+from Person
+left join Address
+    on Person.personId = Address.personId;
