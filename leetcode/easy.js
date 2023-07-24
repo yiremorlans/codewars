@@ -349,3 +349,21 @@ var numIdenticalPairs = function (nums) {
   }
   return pairsAccum;
 };
+
+/**
+ * Given an integer x, return true if x is a palindrome, and false otherwise. Could you solve it without converting the integer to a string?
+ */
+var isPalindrome = function (x) {
+  let reverse = 0;
+  let copy = x;
+
+  //The loop break when the copy of original number becomes zero
+  //Also negative number cannot be a palindrome
+  while (copy > 0) {
+    const digit = copy % 10;
+    reverse = reverse * 10 + digit;
+    copy = Math.floor(copy / 10);
+  }
+
+  return reverse == x;
+};
