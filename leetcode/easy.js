@@ -384,3 +384,21 @@ var longestCommonPrefix = function (strs) {
   }
   return strs[0];
 };
+/**
+ * Remove Duplicates from Sorted Array.
+ * Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.
+ * The relativeorder of the elements should be kept the same. Then return the number of unique elements in nums.
+ */
+var removeDuplicates = function (nums) {
+  let temp = nums[0];
+  let position = 1;
+
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] > temp) {
+      temp = nums[i];
+      nums[position] = temp;
+      position++;
+    }
+  }
+  return position;
+};
