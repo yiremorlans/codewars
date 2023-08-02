@@ -449,3 +449,29 @@ var applyOperations = function (nums) {
 
   return [...noZeros, ...onlyZeros];
 };
+/**
+ * Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+ * You must implement a solution with a linear runtime complexity and use only constant extra space.
+ */
+var singleNumber = function (nums) {
+  let cache = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i];
+    if (cache.hasOwnProperty(value)) {
+      cache[value]++;
+    } else {
+      cache[value] = 1;
+    }
+  }
+
+  for (const [key, value] of Object.entries(cache)) {
+    if (value === 1) {
+      return key;
+    }
+  }
+};
+/* O(n^2) easy to read solution */
+var singleNumber = function (nums) {
+  return nums.filter((num) => nums.indexOf(num) === nums.lastIndexOf(num));
+};
