@@ -475,3 +475,30 @@ var singleNumber = function (nums) {
 var singleNumber = function (nums) {
   return nums.filter((num) => nums.indexOf(num) === nums.lastIndexOf(num));
 };
+/**
+ * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+ */
+var isValid = function (s) {
+  const map = {
+    ")": "(",
+    "]": "[",
+    "}": "{",
+  };
+
+  let stack = [];
+
+  for (const bracket of s) {
+    if (
+      map.hasOwnProperty(bracket) &&
+      stack[stack.length - 1] === map[bracket]
+    ) {
+      stack.pop();
+    } else if (bracket === "(" || bracket === "[" || bracket === "{") {
+      stack.push(bracket);
+    } else {
+      return false;
+    }
+  }
+
+  return stack.length === 0;
+};
