@@ -502,3 +502,41 @@ var isValid = function (s) {
 
   return stack.length === 0;
 };
+/**
+ * Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+ */
+var isAnagram = function (s, t) {
+  if (s.length !== t.length) return false;
+
+  function createCache(str) {
+    let cache = {};
+
+    for (const letter of str) {
+      if (cache.hasOwnProperty(letter)) {
+        cache[letter]++;
+      } else {
+        cache[letter] = 1;
+      }
+    }
+    return cache;
+  }
+
+  const sCache = createCache(s);
+  const tCache = createCache(t);
+
+  for (const [key, value] of Object.entries(tCache)) {
+    if (!(sCache.hasOwnProperty(key) && sCache[key] === tCache[key])) {
+      return false;
+    }
+  }
+  return true;
+};
+/** Less verbose solution using methods **/
+var isAnagram = function (s, t) {
+  if (s.length !== t.length) return false;
+
+  let splitS = s.split("").sort().join("");
+  let splitT = t.split("").sort().join("");
+
+  return splitS === splitT;
+};
