@@ -540,3 +540,26 @@ var isAnagram = function (s, t) {
 
   return splitS === splitT;
 };
+/**
+ * Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums.
+ * If target exists, then return its index. Otherwise, return -1.
+ * You must write an algorithm with O(log n) runtime complexity.
+ */
+var search = function (nums, target) {
+  let lo = 0;
+  let hi = nums.length;
+
+  do {
+    let mid = Math.floor(lo + (hi - lo) / 2);
+
+    if (nums[mid] === target) {
+      return mid;
+    } else if (nums[mid] > target) {
+      hi = mid;
+    } else {
+      lo = mid + 1;
+    }
+  } while (lo < hi);
+
+  return -1;
+};
